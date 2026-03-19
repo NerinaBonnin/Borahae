@@ -304,7 +304,7 @@ section{padding:5rem 4rem}
 .album-modal-overlay.open{display:flex}
 .album-modal{background:var(--card);width:100%;max-width:760px;border-radius:6px;position:relative;animation:fadeUp .35s ease;margin:auto}
 .album-modal-header{display:grid;grid-template-columns:200px 1fr;min-height:240px}
-.album-modal-cover{border-radius:6px 0 0 0;display:flex;align-items:center;justify-content:center;font-family:'Cormorant Garamond',serif;font-size:2rem;font-weight:300;color:rgba(255,255,255,.85);text-align:center;padding:1.5rem;line-height:1.2}
+.album-modal-cover{border-radius:6px 0 0 0;display:flex;align-items:center;justify-content:center;font-family:'Cormorant Garamond',serif;font-size:2rem;font-weight:300;color:rgba(255,255,255,.85);text-align:center;padding:1.5rem;line-height:1.2;background-size:cover;background-position:center;min-height:240px;}
 .album-modal-info{padding:2rem 2rem 1.5rem}
 .album-modal-type{font-size:.65rem;letter-spacing:.22em;text-transform:uppercase;color:var(--accent);margin-bottom:.5rem}
 .album-modal-title{font-family:'Cormorant Garamond',serif;font-size:2.4rem;font-weight:300;color:var(--text);line-height:1;margin-bottom:.7rem}
