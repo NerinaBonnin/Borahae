@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="light">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BTS — Universe</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a class="nav-logo" href="#">BTS</a>
+  <ul class="nav-links">
+    <li><a href="#members">Integrantes</a></li>
+    <li><a href="#discography">Discografía</a></li>
+    <li><a href="#performances">Actuaciones</a></li>
+    <li><a href="#awards">Premios</a></li>
+    <li><a href="#army">ARMY</a></li>
+    <li><a href="#calendar">Calendario</a></li>
+    <li><a href="#journey">Mi Viaje</a></li>
+  </ul>
+  <div class="nav-actions">
+    <button class="nav-btn" id="search-btn">🔍 Buscar</button>
+    <button class="nav-btn" id="theme-btn">🌙 Modo</button>
+  </div>
+  <div class="hamburger" id="hamburger">
+    <span></span><span></span><span></span>
+  </div>
+</nav>
+
+<!-- MOBILE MENU -->
+<div class="mobile-menu" id="mobile-menu">
+  <a href="#members" onclick="closeMobile()">Integrantes</a>
+  <a href="#discography" onclick="closeMobile()">Discografía</a>
+  <a href="#performances" onclick="closeMobile()">Actuaciones</a>
+  <a href="#awards" onclick="closeMobile()">Premios</a>
+  <a href="#army" onclick="closeMobile()">ARMY</a>
+  <a href="#calendar" onclick="closeMobile()">Calendario</a>
+  <a href="#journey" onclick="closeMobile()">Mi Viaje</a>
+</div>
+
+<!-- SEARCH -->
+<div class="search-overlay" id="search-overlay" onclick="closeSearch(event)">
+  <div class="search-box">
+    <div class="search-input-wrap">
+      <span style="font-size:1.2rem;color:var(--muted)">🔍</span>
+      <input class="search-input" id="search-input" placeholder="Buscar integrante, canción o álbum..." autocomplete="off">
+      <button class="search-close" onclick="closeSearchBox()">✕</button>
+    </div>
+    <div class="search-results" id="search-results">
+      <div class="search-empty">Escribí para buscar...</div>
+    </div>
+  </div>
+</div>
+
+<!-- MINI PLAYER -->
+<div class="mini-player hidden" id="mini-player">
+  <div class="player-header">
+    <span class="player-title">▶ Reproduciendo</span>
+    <button class="player-close-btn" onclick="hidePlayer()">✕</button>
+  </div>
+  <div class="player-track" id="player-track">—</div>
+  <div class="player-artist" id="player-artist">—</div>
+  <div class="player-controls">
+    <button class="player-btn" onclick="prevTrack()">⏮</button>
+    <button class="player-btn play" id="play-btn" onclick="togglePlay()">▶</button>
+    <button class="player-btn" onclick="nextTrack()">⏭</button>
+  </div>
+  <div class="player-progress" onclick="seekPlayer(event)">
+    <div class="player-progress-bar" id="player-bar"></div>
+  </div>
+</div>
+<button class="player-toggle" id="player-toggle" onclick="showPlayer()">♫</button>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-text fade-in">
+    <span class="hero-tag">Bangtan Sonyeondan · 방탄소년단</span>
+    <h1 class="hero-title">Más allá<br>de la <span>Escena</span></h1>
+    <p class="hero-desc">Siete voces. Un universo. Desde 2013, BTS redefinió lo que significa ser artistas — hablándole a una generación a través de la música, la autenticidad y el amor.</p>
+    <div class="hero-btns">
+      <a href="#members" class="btn">Conocé a los integrantes</a>
+      <a href="#journey" class="btn btn-accent">Mi Viaje con BTS</a>
+    </div>
+  </div>
+  <div class="hero-visual fade-in">
+    <div class="hero-circle">
+      <div class="hero-circle-badge">
+        <span class="num">7</span>
+        <span class="label">Integrantes</span>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- MEMBERS -->
+<section id="members">
+  <div class="fade-in">
+    <p class="section-tag">Los siete</p>
+    <h2 class="section-title">Integrantes</h2>
+  </div>
+  <div class="members-grid fade-in">
+    <div class="member-card" onclick="openMemberModal('RM')">
+      <div class="member-avatar m1">
+        <img src="imagenes/rm.jpg" class="member-photo">
+        <button class="fav-heart" id="fav-RM" onclick="event.stopPropagation();toggleFav('RM')">♡</button>
+        <span class="member-avatar-initial"></span>
+        <span class="member-name-overlay">RM</span>
+      </div>
+      <div class="member-role-tag">Líder · Rapero</div>
+    </div>
+    <div class="member-card" onclick="openMemberModal('Jin')">
+      <div class="member-avatar m2">
+        <img src="imagenes/jin.jpg" class="member-photo">
+        <button class="fav-heart" id="fav-Jin" onclick="event.stopPropagation();toggleFav('Jin')">♡</button>
+        <span class="member-avatar-initial"></span>
+        <span class="member-name-overlay">Jin</span>
+      </div>
+      <div class="member-role-tag">Vocalista</div>
+    </div>
+    <div class="member-card" onclick="openMemberModal('Suga')">
+      <div class="member-avatar m3">
+        <img src="imagenes/suga.jpg" class="member-photo">
+        <button class="fav-heart" id="fav-Suga" onclick="event.stopPropagation();toggleFav('Suga')">♡</button>
+        <span class="member-avatar-initial"></span>
+        <span class="member-name-overlay">Suga</span>
+      </div>
+      <div class="member-role-tag">Rapero · Productor</div>
+    </div>
+    <div class="member-card" onclick="openMemberModal('J-Hope')">
+      <div class="member-avatar m4">
+        <img src="imagenes/j-hope.jpg" class="member-photo">
+        <button class="fav-heart" id="fav-J-Hope" onclick="event.stopPropagation();toggleFav('J-Hope')">♡</button>
+        <span class="member-avatar-initial"></span>
+        <span class="member-name-overlay">J-Hope</span>
+      </div>
+      <div class="member-role-tag">Rapero · Bailarín</div>
+    </div>
+    <div class="member-card" onclick="openMemberModal('Jimin')">
+      <div class="member-avatar m5">
+        <img src="imagenes/jimin.jpg" class="member-photo">
+        <button class="fav-heart" id="fav-Jimin" onclick="event.stopPropagation();toggleFav('Jimin')">♡</button>
+        <span class="member-avatar-initial"></span>
+        <span class="member-name-overlay">Jimin</span>
+      </div>
+      <div class="member-role-tag">Vocalista · Bailarín</div>
+    </div>
+    <div class="member-card" onclick="openMemberModal('V')">
+      <div class="member-avatar m6">
+        <img src="imagenes/v.jpg" class="member-photo">
+        <button class="fav-heart" id="fav-V" onclick="event.stopPropagation();toggleFav('V')">♡</button>
+        <span class="member-avatar-initial"></span>
+        <span class="member-name-overlay">V</span>
+      </div>
+      <div class="member-role-tag">Vocalista</div>
+    </div>
+    <div class="member-card" onclick="openMemberModal('Jungkook')">
+      <div class="member-avatar m7">
+        <img src="imagenes/junkook.jpg" class="member-photo">
+        <button class="fav-heart" id="fav-Jungkook" onclick="event.stopPropagation();toggleFav('Jungkook')">♡</button>
+        <span class="member-avatar-initial"></span>
+        <span class="member-name-overlay">Jungkook</span>
+      </div>
+      <div class="member-role-tag">Vocalista Principal</div>
+    </div>
+  </div>
+</section>
+
+<!-- DISCOGRAPHY -->
+<section id="discography">
+  <div class="fade-in">
+    <p class="section-tag">La música</p>
+    <h2 class="section-title">Discografía</h2>
+  </div>
+  <div class="album-tabs fade-in">
+    <button class="album-tab active" onclick="switchTab('group',this)">Álbumes Grupales</button>
+    <button class="album-tab" onclick="switchTab('solo',this)">Álbumes Solistas</button>
+  </div>
+  <div class="disc-panel active" id="panel-group">
+    <div class="albums-grid fade-in" id="group-grid"></div>
+  </div>
+  <div class="disc-panel" id="panel-solo">
+    <div class="solo-grid fade-in" id="solo-grid"></div>
+  </div>
+</section>
+
+<!-- GALLERY -->
+<section id="gallery">
+  <div class="fade-in">
+    <p class="section-tag">Archivo visual</p>
+    <h2 class="section-title">Galería</h2>
+  </div>
+  <div class="gallery-grid fade-in">
+    <div class="gallery-item g1"><div class="gallery-placeholder gb4"><span class="gallery-label">En Escena</span></div></div>
+    <div class="gallery-item g2"><div class="gallery-placeholder gb2"><span class="gallery-label">Sesión de Fotos</span></div></div>
+    <div class="gallery-item g3"><div class="gallery-placeholder gb3"><span class="gallery-label">Detrás de Escena</span></div></div>
+    <div class="gallery-item g4"><div class="gallery-placeholder gb1"><span class="gallery-label">Gira Mundial</span></div></div>
+    <div class="gallery-item g5"><div class="gallery-placeholder gb5"><span class="gallery-label">Videos Musicales</span></div></div>
+    <div class="gallery-item g6"><div class="gallery-placeholder gb6"><span class="gallery-label">Weverse</span></div></div>
+    <div class="gallery-item g7"><div class="gallery-placeholder gb7"><span class="gallery-label">Run BTS</span></div></div>
+  </div>
+</section>
+
+<!-- PERFORMANCES -->
+<section id="performances">
+  <div class="fade-in">
+    <p class="section-tag">Momentos épicos</p>
+    <h2 class="section-title">Presentaciones Icónicas</h2>
+  </div>
+  <div class="performances-grid fade-in">
+    <div class="perf-card">
+      <div class="perf-video-wrap">
+        <iframe src="https://www.youtube.com/embed/9bZkp7q19f0" title="Blood Sweat and Tears MMA 2016" allowfullscreen loading="lazy"></iframe>
+      </div>
+      <div class="perf-info">
+        <div class="perf-year-tag">MMA 2016</div>
+        <div class="perf-title">Blood Sweat & Tears</div>
+        <p class="perf-desc">La actuación que lo cambió todo. Con una escenografía inspirada en el Renacimiento, BTS combinó danza, arte y música en una sola performance que dejó a todo el mundo sin palabras.</p>
+      </div>
+    </div>
+    <div class="perf-card">
+      <div class="perf-video-wrap">
+        <iframe src="https://www.youtube.com/embed/GjrNfJ5Ufok" title="BTS Fake Love BBMAs 2018" allowfullscreen loading="lazy"></iframe>
+      </div>
+      <div class="perf-info">
+        <div class="perf-year-tag">Billboard Music Awards 2018</div>
+        <div class="perf-title">Fake Love</div>
+        <p class="perf-desc">El debut de BTS en los premios americanos más importantes. La actuación de Fake Love demostró que el K-pop había llegado para quedarse en el mercado occidental.</p>
+      </div>
+    </div>
+    <div class="perf-card">
+      <div class="perf-video-wrap">
+        <iframe src="https://www.youtube.com/embed/MlXCGNnT3Sk" title="BTS ON GRAMMYs 2021" allowfullscreen loading="lazy"></iframe>
+      </div>
+      <div class="perf-info">
+        <div class="perf-year-tag">Grammy Awards 2021</div>
+        <div class="perf-title">ON / Dynamite / Life Goes On</div>
+        <p class="perf-desc">La primera actuación de BTS en los Grammy. Una producción monumental que incluyó múltiples escenarios, cambios de vestuario y una coreografía impecable que paralizó al mundo.</p>
+      </div>
+    </div>
+    <div class="perf-card">
+      <div class="perf-video-wrap">
+        <iframe src="https://www.youtube.com/embed/qGjAWJ2zWWI" title="BTS IDOL MMA 2018" allowfullscreen loading="lazy"></iframe>
+      </div>
+      <div class="perf-info">
+        <div class="perf-year-tag">MMA 2018</div>
+        <div class="perf-title">IDOL</div>
+        <p class="perf-desc">Un espectáculo de 15 minutos que mezcló K-pop con elementos de la cultura tradicional coreana, terminando con fuegos artificiales en vivo. Considerada una de las mejores actuaciones de su carrera.</p>
+      </div>
+    </div>
+    <div class="perf-card">
+      <div class="perf-video-wrap">
+        <iframe src="https://www.youtube.com/embed/aMEbpSMFhDg" title="BTS Lollapalooza j-hope 2022" allowfullscreen loading="lazy"></iframe>
+      </div>
+      <div class="perf-info">
+        <div class="perf-year-tag">Lollapalooza 2022</div>
+        <div class="perf-title">j-hope Headliner</div>
+        <p class="perf-desc">J-Hope se convirtió en el primer artista coreano en headlinear el festival Lollapalooza en Chicago. Una actuación histórica de 30 canciones ante 100.000 personas.</p>
+      </div>
+    </div>
+    <div class="perf-card">
+      <div class="perf-video-wrap">
+        <iframe src="https://www.youtube.com/embed/NnFcCK-0vhE" title="BTS Butter AMAs 2021" allowfullscreen loading="lazy"></iframe>
+      </div>
+      <div class="perf-info">
+        <div class="perf-year-tag">AMAs 2021</div>
+        <div class="perf-title">Butter / Permission to Dance</div>
+        <p class="perf-desc">Una actuación llena de energía y elegancia donde BTS demostró por qué son los dueños del escenario. La transición entre canciones fue un momento cinematográfico impresionante.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- AWARDS -->
+<section id="awards">
+  <div class="fade-in">
+    <p class="section-tag">Reconocimiento global</p>
+    <h2 class="section-title">Premios & Récords</h2>
+  </div>
+  <div class="awards-stats fade-in">
+    <div class="stat-card"><div class="stat-num">500+</div><div class="stat-label">Premios totales</div></div>
+    <div class="stat-card"><div class="stat-num">20</div><div class="stat-label">Países con #1</div></div>
+    <div class="stat-card"><div class="stat-num">4</div><div class="stat-label">#1 en Billboard Hot 100</div></div>
+    <div class="stat-card"><div class="stat-num">100M+</div><div class="stat-label">Seguidores en redes</div></div>
+  </div>
+  <div class="awards-grid fade-in">
+    <div class="award-card"><div class="award-icon">🏆</div><div><div class="award-year">2020</div><div class="award-name">Premio Billboard Music Awards</div><div class="award-show">Top Duo / Group</div></div></div>
+    <div class="award-card"><div class="award-icon">🎵</div><div><div class="award-year">2020</div><div class="award-name">Primer #1 en Billboard Hot 100</div><div class="award-show">"Dynamite" — primer grupo coreano</div></div></div>
+    <div class="award-card"><div class="award-icon">🌟</div><div><div class="award-year">2021</div><div class="award-name">American Music Awards</div><div class="award-show">Artist of the Year</div></div></div>
+    <div class="award-card"><div class="award-icon">📀</div><div><div class="award-year">2021</div><div class="award-name">Grammy Nomination</div><div class="award-show">Best Pop Duo/Group — "Dynamite"</div></div></div>
+    <div class="award-card"><div class="award-icon">🎤</div><div><div class="award-year">2018</div><div class="award-name">Discurso en la ONU</div><div class="award-show">Campaña UNICEF "Generation Unlimited"</div></div></div>
+    <div class="award-card"><div class="award-icon">🏅</div><div><div class="award-year">2018</div><div class="award-name">Orden del Mérito Cultural</div><div class="award-show">Gobierno de Corea del Sur</div></div></div>
+    <div class="award-card"><div class="award-icon">📊</div><div><div class="award-year">2017</div><div class="award-name">Primer K-pop en Billboard Hot 100</div><div class="award-show">"DNA" — top 10 de Billboard</div></div></div>
+    <div class="award-card"><div class="award-icon">🎶</div><div><div class="award-year">2023</div><div class="award-name">Primer solista coreano #1</div><div class="award-show">Jimin — "Like Crazy" en Billboard Hot 100</div></div></div>
+    <div class="award-card"><div class="award-icon">🌐</div><div><div class="award-year">2019</div><div class="award-name">Lollapalooza Headliner</div><div class="award-show">j-hope — primer artista coreano</div></div></div>
+    <div class="award-card"><div class="award-icon">🔥</div><div><div class="award-year">2021</div><div class="award-name">Actuación en sede de la ONU</div><div class="award-show">Primer artista musical en hacerlo</div></div></div>
+    <div class="award-card"><div class="award-icon">💿</div><div><div class="award-year">2022</div><div class="award-name">Récord Guinness</div><div class="award-show">Álbum físico más vendido en historia de Corea</div></div></div>
+    <div class="award-card"><div class="award-icon">✨</div><div><div class="award-year">Múltiple</div><div class="award-name">Daesang (Gran Premio)</div><div class="award-show">Mnet, Melon, Seoul Music Awards</div></div></div>
+  </div>
+</section>
+
+<!-- IMPACT -->
+<section id="impact">
+  <div class="fade-in">
+    <p class="section-tag">Más allá de la música</p>
+    <h2 class="section-title">Impacto Cultural</h2>
+  </div>
+  <div class="impact-grid fade-in">
+    <div class="impact-card">
+      <div class="impact-num">$5B+</div>
+      <div class="impact-card-title">Impacto económico</div>
+      <p class="impact-card-text">El "efecto BTS" mueve miles de millones de dólares anuales en Corea del Sur. Desde turismo hasta productos, su influencia económica es comparable a la de grandes corporaciones.</p>
+    </div>
+    <div class="impact-card">
+      <div class="impact-num">1era</div>
+      <div class="impact-card-title">Apertura de occidente al K-pop</div>
+      <p class="impact-card-text">BTS fue el primer grupo coreano en cruzar verdaderamente la barrera idiomática y cultural, logrando que el mundo cantara canciones en coreano sin importarle no entenderlas.</p>
+    </div>
+    <div class="impact-card">
+      <div class="impact-num">💜</div>
+      <div class="impact-card-title">Campaña Love Myself</div>
+      <p class="impact-card-text">En alianza con UNICEF, BTS lanzó la campaña "Love Myself" que recaudó millones para combatir la violencia contra jóvenes. Su mensaje de autoestima llegó a millones de adolescentes.</p>
+    </div>
+    <div class="impact-card">
+      <div class="impact-num">🗣️</div>
+      <div class="impact-card-title">Voz de una generación</div>
+      <p class="impact-card-text">BTS habló sobre salud mental, identidad y aceptación en una industria que históricamente silenció a sus artistas. Abrieron conversaciones que antes eran tabú en Corea y en el mundo.</p>
+    </div>
+    <div class="impact-card">
+      <div class="impact-num">🎨</div>
+      <div class="impact-card-title">Revolución del arte K-pop</div>
+      <p class="impact-card-text">Llevaron la producción musical y visual del K-pop a niveles nunca vistos: MVs con presupuesto cinematográfico, universos narrativos complejos y conceptos artísticos profundos.</p>
+    </div>
+    <div class="impact-card">
+      <div class="impact-num">🌏</div>
+      <div class="impact-card-title">Soft power coreano</div>
+      <p class="impact-card-text">El gobierno coreano reconoció a BTS como embajadores culturales del país. Son los representantes más influyentes del "Hallyu" (Ola Coreana) en todo el mundo.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ARMY -->
+<section id="army">
+  <div class="fade-in">
+    <p class="section-tag">La familia</p>
+    <h2 class="section-title">El Fandom ARMY</h2>
+    <p class="army-intro">ARMY (Adorable Representative M.C for Youth) no es solo una base de fans — es un movimiento global. Millones de personas en cada rincón del planeta comparten no solo música, sino valores, amistades y proyectos de impacto real.</p>
+  </div>
+  <div class="army-grid fade-in">
+    <div class="army-card">
+      <div class="army-icon">💜</div>
+      <div class="army-card-title">¿Qué es ARMY?</div>
+      <p class="army-card-text">Fundado en 2013 con el debut de BTS, ARMY creció hasta convertirse en el fandom más activo e influyente del mundo. El nombre refleja la sinergia entre el grupo y sus fans: "BTS y ARMY siempre estarán juntos".</p>
+    </div>
+    <div class="army-card">
+      <div class="army-icon">🌐</div>
+      <div class="army-card-title">Presencia global</div>
+      <p class="army-card-text">Con presencia en más de 100 países, ARMY se organiza en fan clubs locales, cuentas de redes sociales y proyectos comunitarios. Tienen una capacidad de movilización sin igual: pueden hacer trending cualquier tema en minutos.</p>
+    </div>
+    <div class="army-card">
+      <div class="army-icon">🤝</div>
+      <div class="army-card-title">Proyectos de impacto</div>
+      <p class="army-card-text">Cuando BTS donó $1M a Black Lives Matter, ARMY igualó la donación en menos de 24 horas. Han plantado bosques, apoyado causas de salud mental y financiado becas universitarias en nombre de BTS.</p>
+    </div>
+    <div class="army-card">
+      <div class="army-icon">📱</div>
+      <div class="army-card-title">Cultura del fandom</div>
+      <p class="army-card-text">ARMY creó un ecosistema cultural propio: fan art, fan fiction (AO3), análisis de letras, compilaciones de actuaciones y proyectos de traducción que hacen accesible el contenido en decenas de idiomas.</p>
+    </div>
+    <div class="army-card">
+      <div class="army-icon">🎂</div>
+      <div class="army-card-title">Proyectos de cumpleaños</div>
+      <p class="army-card-text">Cada cumpleaños de un integrante se convierte en un evento global: vallas publicitarias en Times Square, cafeterías temáticas en Corea, campañas de donación en su nombre. El ARMY hace de cada fecha una celebración mundial.</p>
+    </div>
+    <div class="army-card">
+      <div class="army-icon">💡</div>
+      <div class="army-card-title">ARMY como comunidad</div>
+      <p class="army-card-text">Más allá de la música, ARMY ha creado lazos genuinos de amistad y apoyo mutuo. Muchos miembros cuentan que encontraron comunidad, identidad y hasta salud mental gracias a este espacio compartido.</p>
+    </div>
+  </div>
+</section>
+
+<!-- CALENDAR -->
+<section id="calendar">
+  <div class="fade-in">
+    <p class="section-tag">Fechas para no olvidar</p>
+    <h2 class="section-title">Calendario BTS</h2>
+  </div>
+  <div class="cal-grid fade-in" id="cal-grid"></div>
+</section>
+
+<!-- QUOTES -->
+<section id="quotes">
+  <div class="fade-in">
+    <p class="section-tag">Sus palabras</p>
+    <h2 class="section-title">Frases que nos marcaron</h2>
+  </div>
+  <div class="quotes-grid fade-in">
+    <div class="quote-card"><div class="quote-mark">"</div><p class="quote-text">No te rindas en tu sueño. La vida es corta, vívela al máximo mientras puedas.</p><span class="quote-author">— RM</span></div>
+    <div class="quote-card"><div class="quote-mark">"</div><p class="quote-text">Sin importar quién seas, de dónde seas, cuál sea tu color de piel: habla por ti mismo. Encuéntrate a ti mismo.</p><span class="quote-author">— RM · Discurso en la ONU, 2018</span></div>
+    <div class="quote-card"><div class="quote-mark">"</div><p class="quote-text">La vida es una serie de elecciones. Cada momento es una nueva oportunidad de ser la persona que querés ser.</p><span class="quote-author">— Suga</span></div>
+    <div class="quote-card"><div class="quote-mark">"</div><p class="quote-text">No importa cuántas veces caes, lo que importa es cuántas veces te levantás.</p><span class="quote-author">— J-Hope</span></div>
+    <div class="quote-card"><div class="quote-mark">"</div><p class="quote-text">Amar no es solo amar a otro. Es amarte a vos mismo lo suficiente como para poder amar a los demás.</p><span class="quote-author">— Jimin</span></div>
+    <div class="quote-card"><div class="quote-mark">"</div><p class="quote-text">Los errores son prueba de que estás intentando. No tengas miedo de equivocarte.</p><span class="quote-author">— Jin</span></div>
+    <div class="quote-card"><div class="quote-mark">"</div><p class="quote-text">Vivir sin pasión es como estar muerto. Seguí lo que te hace sentir vivo.</p><span class="quote-author">— V</span></div>
+    <div class="quote-card"><div class="quote-mark">"</div><p class="quote-text">Todavía estoy aprendiendo. Todavía estoy creciendo. Pero nunca voy a parar de intentarlo.</p><span class="quote-author">— Jungkook</span></div>
+  </div>
+</section>
+
+<!-- TIMELINE -->
+<section id="timeline">
+  <div class="fade-in">
+    <p class="section-tag">El camino recorrido</p>
+    <h2 class="section-title">Momentos Históricos</h2>
+  </div>
+  <div class="timeline fade-in">
+    <div class="timeline-item"><div class="timeline-year">13 de junio, 2013</div><div class="timeline-event">El debut: "No More Dream"</div><p class="timeline-desc">BTS debuta en Big Hit Entertainment. Siete jóvenes comienzan un viaje que cambiaría la música para siempre.</p></div>
+    <div class="timeline-item"><div class="timeline-year">2015</div><div class="timeline-event">The Most Beautiful Moment in Life</div><p class="timeline-desc">Con "I Need U" y "Run", BTS lanza una de sus eras más queridas, construyendo la base del ARMY internacional.</p></div>
+    <div class="timeline-item"><div class="timeline-year">Octubre 2016</div><div class="timeline-event">Wings: el salto artístico</div><p class="timeline-desc">Con "Blood Sweat & Tears", BTS rompe récords en Asia y establece su identidad como artistas serios.</p></div>
+    <div class="timeline-item"><div class="timeline-year">Septiembre 2017</div><div class="timeline-event">DNA entra al Billboard Hot 100</div><p class="timeline-desc">Primer grupo de K-pop en el top 10 del Billboard Hot 100. Las puertas de occidente se abren.</p></div>
+    <div class="timeline-item"><div class="timeline-year">Septiembre 2018</div><div class="timeline-event">Discurso ante las Naciones Unidas</div><p class="timeline-desc">RM habla ante la Asamblea General de la ONU con el mensaje "Speak Yourself" como parte de la campaña UNICEF.</p></div>
+    <div class="timeline-item"><div class="timeline-year">Agosto 2020</div><div class="timeline-event">Dynamite: #1 en Billboard Hot 100</div><p class="timeline-desc">Primer grupo coreano en alcanzar el #1 en Estados Unidos. Un hito histórico para la música mundial.</p></div>
+    <div class="timeline-item"><div class="timeline-year">Noviembre 2021</div><div class="timeline-event">Permission to Dance en la ONU</div><p class="timeline-desc">BTS actúa en la sede de la ONU en Nueva York, primeros artistas musicales en lograrlo.</p></div>
+    <div class="timeline-item"><div class="timeline-year">Julio 2022</div><div class="timeline-event">j-hope en Lollapalooza</div><p class="timeline-desc">Primer artista coreano en headlinear Lollapalooza Chicago. Una actuación histórica ante 100.000 personas.</p></div>
+    <div class="timeline-item"><div class="timeline-year">Junio 2022</div><div class="timeline-event">Proof y el hiato grupal</div><p class="timeline-desc">Tras lanzar la antología "Proof", BTS anuncia pausa para servicio militar y proyectos solistas.</p></div>
+    <div class="timeline-item"><div class="timeline-year">2025–2026</div><div class="timeline-event">La reunión: BTS vuelve</div><p class="timeline-desc">Con todos los integrantes completando su servicio, BTS anuncia su reencuentro. El ARMY espera.</p></div>
+  </div>
+</section>
+
+<!-- UNIVERSE -->
+<section id="universe">
+  <div class="fade-in">
+    <p class="section-tag">El universo narrativo</p>
+    <h2 class="section-title">El Universo BTS (BU)</h2>
+    <p class="universe-intro">El BTS Universe es un universo narrativo ficticio construido a través de videoclips, webtoons, novelas y juegos. No es solo música — es una historia sobre siete amigos, el dolor del crecimiento y la búsqueda de la felicidad.</p>
+  </div>
+  <div class="universe-grid fade-in">
+    <div class="universe-card"><div class="universe-icon">📖</div><div class="universe-card-title">El origen: Save Me</div><p class="universe-card-text">Seokjin descubre que puede viajar en el tiempo. Al ver morir a sus amigos, entra en un loop temporal intentando salvarlos. Cada videoclip desde 2015 fue una pieza de este rompecabezas.</p></div>
+    <div class="universe-card"><div class="universe-icon">🌸</div><div class="universe-card-title">The Most Beautiful Moment</div><p class="universe-card-text">La era de "I Need U" y "Run" establece el núcleo del universo: siete jóvenes en el umbral de la adultez, cada uno cargando un trauma diferente. Flores de cerezo y fuego: belleza y destrucción.</p></div>
+    <div class="universe-card"><div class="universe-icon">🪶</div><div class="universe-card-title">Wings y la tentación</div><p class="universe-card-text">Inspirada en "Demian" de Hesse, la era Wings muestra a cada joven enfrentando su sombra interior. El pájaro que rompe el cascarón: para volar, primero hay que caer.</p></div>
+    <div class="universe-card"><div class="universe-icon">💌</div><div class="universe-card-title">Love Yourself y la aceptación</div><p class="universe-card-text">"Her" es el enamoramiento, "Tear" es la ruptura, "Answer" es la resolución: solo cuando te amás a vos mismo podés amar verdaderamente a otro.</p></div>
+    <div class="universe-card"><div class="universe-icon">🗺️</div><div class="universe-card-title">Map of the Soul y Jung</div><p class="universe-card-text">Incorpora la psicología jungiana: Persona (la máscara), Sombra (lo reprimido) y Ego (el yo consciente). Cada integrante representa un arquetipo jungiano.</p></div>
+    <div class="universe-card"><div class="universe-icon">📚</div><div class="universe-card-title">Webtoon & Novelas</div><p class="universe-card-text">El BU se expandió con el webtoon "Save Me", las novelas "The Notes" y el juego "BTS Universe Story". Todos conectados narrativamente con los videoclips.</p></div>
+  </div>
+  <div class="fade-in">
+    <div style="font-size:.65rem;letter-spacing:.22em;text-transform:uppercase;color:var(--dusty);margin-bottom:1rem;padding-bottom:.5rem;border-bottom:1px solid var(--border)">Elementos clave del universo</div>
+    <div class="universe-tags">
+      <span class="universe-tag">Viajes en el tiempo</span><span class="universe-tag">Loops temporales</span><span class="universe-tag">Simbolismo floral</span><span class="universe-tag">Psicología jungiana</span><span class="universe-tag">7 arquetipos</span><span class="universe-tag">Espejo / alter ego</span><span class="universe-tag">Trauma y sanación</span><span class="universe-tag">Mariposas</span><span class="universe-tag">El número 7</span><span class="universe-tag">Demian · Hermann Hesse</span><span class="universe-tag">Webtoon Save Me</span><span class="universe-tag">The Notes</span>
+    </div>
+  </div>
+</section>
+
+<!-- MY JOURNEY -->
+<section id="journey">
+  <div class="fade-in">
+    <p class="section-tag">Personalizado para vos</p>
+    <h2 class="section-title">Tu Viaje con BTS</h2>
+  </div>
+  <div class="journey-container fade-in">
+    <div class="journey-form">
+      <label class="journey-label">¿Quién es tu integrante favorito?</label>
+      <div class="member-picker" id="member-picker">
+        <button class="member-pick-btn" onclick="pickMember('RM')">RM</button>
+        <button class="member-pick-btn" onclick="pickMember('Jin')">Jin</button>
+        <button class="member-pick-btn" onclick="pickMember('Suga')">Suga</button>
+        <button class="member-pick-btn" onclick="pickMember('J-Hope')">J-Hope</button>
+        <button class="member-pick-btn" onclick="pickMember('Jimin')">Jimin</button>
+        <button class="member-pick-btn" onclick="pickMember('V')">V</button>
+        <button class="member-pick-btn" onclick="pickMember('Jungkook')">Jungkook</button>
+      </div>
+      <label class="journey-label">Buscá y elegí tus canciones favoritas</label>
+      <input class="song-search-input" id="song-search" placeholder="Buscar canción..." oninput="filterSongs(this.value)">
+      <div class="song-options" id="song-options"></div>
+      <button class="journey-save-btn" onclick="saveJourney()">💾 Guardar mi perfil BTS</button>
+    </div>
+    <div class="journey-result" id="journey-result">
+      <div class="journey-result-placeholder">Completá tu perfil para ver tu resumen 💜</div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="logo">BTS</div>
+  <p>Sitio de fans — sin afiliación con HYBE / Big Hit Entertainment</p>
+  <p>Purple you 💜</p>
+</footer>
+
+<!-- MEMBER MODAL -->
+<div class="modal-overlay" id="member-modal" onclick="closeOnBackdrop(event,'member-modal')">
+  <div class="modal">
+    <button class="modal-close-btn" onclick="closeModal('member-modal')">✕</button>
+    <div class="modal-avatar-circle" id="mm-avatar"></div>
+    <h3 class="modal-name" id="mm-name"></h3>
+    <p class="modal-role" id="mm-role"></p>
+    <p class="modal-bio" id="mm-bio"></p>
+    <div class="modal-facts" id="mm-facts"></div>
+  </div>
+</div>
+
+<!-- ALBUM MODAL -->
+<div class="album-modal-overlay" id="album-modal" onclick="closeOnBackdrop(event,'album-modal')">
+  <div class="album-modal">
+    <button class="album-modal-close-btn" onclick="closeModal('album-modal')">✕</button>
+    <div class="album-modal-header">
+      <div class="album-modal-cover" id="am-cover"></div>
+      <div class="album-modal-info">
+        <div class="album-modal-type" id="am-type"></div>
+        <div class="album-modal-title" id="am-title"></div>
+        <div class="album-modal-meta" id="am-meta"></div>
+      </div>
+    </div>
+    <div class="album-modal-body">
+      <div class="album-modal-section-title">La historia</div>
+      <p class="album-story" id="am-story"></p>
+      <div class="album-modal-section-title">Lista de canciones</div>
+      <ul class="tracklist" id="am-tracklist"></ul>
+    </div>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
