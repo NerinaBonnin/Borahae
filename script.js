@@ -64,39 +64,487 @@ const memberModalPhotos = {
 // ─── DATA ───────────────────────────────────────────────────────────────────
 
 const membersData = {
-  'RM':{ role:'Líder · Rapero Principal', color:'linear-gradient(135deg,#C9B8B0,#9E8A82)', bio:'Kim Namjoon, conocido como RM, es el líder y rapero principal de BTS. Aprendió inglés de forma autodidacta y es el principal comunicador del grupo en el exterior, además de ser reconocido como artista y poeta solista. Estudió arte y filosofía, lo que se refleja frecuentemente en sus letras.', facts:{'Nombre real':'Kim Namjoon','Nacimiento':'12 sep, 1994','Origen':'Ilsan, Corea del Sur','Solista':'Indigo (2022)'}},
-  'Jin':{ role:'Vocalista', color:'linear-gradient(135deg,#B8CDD6,#8AADB8)', bio:'Kim Seokjin, conocido como Jin, es el integrante mayor de BTS. Reconocido por su voz clara y distintiva, se hizo famoso mundialmente tanto por su canto como por su cálida y divertida personalidad. Lanzó su álbum solista "Happy" en 2024.', facts:{'Nombre real':'Kim Seokjin','Nacimiento':'4 dic, 1992','Origen':'Gwacheon, Corea del Sur','Solista':'Happy (2024)'}},
-  'Suga':{ role:'Rapero · Productor', color:'linear-gradient(135deg,#D4A5A0,#C07870)', bio:'Min Yoongi, conocido como Suga (y Agust D como solista), es el rapero principal y uno de los productores clave de BTS. Profundamente introspectivo, habló abiertamente sobre sus luchas con la salud mental, resonando con millones en todo el mundo.', facts:{'Nombre real':'Min Yoongi','Nacimiento':'9 mar, 1993','Origen':'Daegu, Corea del Sur','Solista':'D-Day (2023)'}},
-  'J-Hope':{ role:'Rapero · Bailarín Principal', color:'linear-gradient(135deg,#C5C9B5,#9EA38A)', bio:'Jung Hoseok, conocido como J-Hope, es el bailarín principal y rapero de BTS. Conocido por su energía brillante, fue el primer integrante en headlinear un gran festival en EE.UU., actuando en Lollapalooza 2022.', facts:{'Nombre real':'Jung Hoseok','Nacimiento':'18 feb, 1994','Origen':'Gwangju, Corea del Sur','Solista':'Jack In The Box (2022)'}},
-  'Jimin':{ role:'Vocalista Principal · Bailarín Principal', color:'linear-gradient(135deg,#C4B8D4,#9A8AB0)', bio:'Park Jimin es conocido por sus emotivas dotes vocales y su baile fluido. Se formó en danza contemporánea antes de unirse a BTS. Su "Like Crazy" fue el primer single solista coreano en alcanzar el #1 en el Billboard Hot 100.', facts:{'Nombre real':'Park Jimin','Nacimiento':'13 oct, 1995','Origen':'Busan, Corea del Sur','Solista':'FACE (2023)'}},
-  'V':{ role:'Vocalista', color:'linear-gradient(135deg,#D4C5A0,#B0A07A)', bio:'Kim Taehyung, conocido como V, es admirado por su profunda voz de barítono y su pasión por el arte. Su álbum Layover fusionó jazz y R&B con una sensibilidad única, mostrando su visión artística independiente.', facts:{'Nombre real':'Kim Taehyung','Nacimiento':'30 dic, 1995','Origen':'Daegu, Corea del Sur','Solista':'Layover (2023)'}},
-  'Jungkook':{ role:'Vocalista Principal · Maknae', color:'linear-gradient(135deg,#B8D4C8,#8AB0A0)', bio:'Jeon Jungkook, el menor (maknae) de BTS, es el vocalista principal. Apodado el "Golden Maknae" por su versatilidad, su álbum Golden generó múltiples éxitos globales, incluyendo "Standing Next to You".', facts:{'Nombre real':'Jeon Jungkook','Nacimiento':'1 sep, 1997','Origen':'Busan, Corea del Sur','Solista':'Golden (2023)'}},
+  'RM':{ 
+    role:'Líder · Rapero Principal', 
+    color:'linear-gradient(135deg,#C9B8B0,#9E8A82)', 
+    bio:'Kim Namjoon, conocido como RM, es el líder y rapero principal de BTS. Aprendió inglés de forma autodidacta y es el principal comunicador del grupo en el exterior, además de ser reconocido como artista y poeta solista. Estudió arte y filosofía, lo que se refleja frecuentemente en sus letras.', 
+    facts:{
+      'Nombre real':'Kim Namjoon',
+      'Nacimiento':'12 sep, 1994',
+      'Origen':'Ilsan, Corea del Sur',
+      'Solista':'Indigo (2022)'}},
+  
+  'Jin':{ 
+    role:'Vocalista', 
+    color:'linear-gradient(135deg,#B8CDD6,#8AADB8)', 
+    bio:'Kim Seokjin, conocido como Jin, es el integrante mayor de BTS. Reconocido por su voz clara y distintiva, se hizo famoso mundialmente tanto por su canto como por su cálida y divertida personalidad. Lanzó su álbum solista "Happy" en 2024.', 
+    facts:{
+      'Nombre real':'Kim Seokjin',
+      'Nacimiento':'4 dic, 1992',
+      'Origen':'Gwacheon, Corea del Sur',
+      'Solista':'Happy (2024)'}},
+  
+  'Suga':{ 
+    role:'Rapero · Productor',
+     color:'linear-gradient(135deg,#D4A5A0,#C07870)', 
+     bio:'Min Yoongi, conocido como Suga (y Agust D como solista), es el rapero principal y uno de los productores clave de BTS. Profundamente introspectivo, habló abiertamente sobre sus luchas con la salud mental, resonando con millones en todo el mundo.', 
+     facts:{
+      'Nombre real':'Min Yoongi',
+      'Nacimiento':'9 mar, 1993',
+      'Origen':'Daegu, Corea del Sur',
+      'Solista':'D-Day (2023)'}},
+  
+  'J-Hope':{ 
+    role:'Rapero · Bailarín Principal',
+    color:'linear-gradient(135deg,#C5C9B5,#9EA38A)', 
+    bio:'Jung Hoseok, conocido como J-Hope, es el bailarín principal y rapero de BTS. Conocido por su energía brillante, fue el primer integrante en headlinear un gran festival en EE.UU., actuando en Lollapalooza 2022.', 
+    facts:{
+      'Nombre real':'Jung Hoseok',
+      'Nacimiento':'18 feb, 1994',
+      'Origen':'Gwangju, Corea del Sur',
+      'Solista':'Jack In The Box (2022)'}},
+  
+  'Jimin':{ 
+    role:'Vocalista Principal · Bailarín Principal', 
+    color:'linear-gradient(135deg,#C4B8D4,#9A8AB0)', 
+    bio:'Park Jimin es conocido por sus emotivas dotes vocales y su baile fluido. Se formó en danza contemporánea antes de unirse a BTS. Su "Like Crazy" fue el primer single solista coreano en alcanzar el #1 en el Billboard Hot 100.', 
+    facts:{
+      'Nombre real':'Park Jimin',
+      'Nacimiento':'13 oct, 1995',
+      'Origen':'Busan, Corea del Sur','Solista':'FACE (2023)'}},
+  
+  'V':{ 
+    role:'Vocalista', 
+    color:'linear-gradient(135deg,#D4C5A0,#B0A07A)', 
+    bio:'Kim Taehyung, conocido como V, es admirado por su profunda voz de barítono y su pasión por el arte. Su álbum Layover fusionó jazz y R&B con una sensibilidad única, mostrando su visión artística independiente.', 
+    facts:{
+      'Nombre real':'Kim Taehyung',
+      'Nacimiento':'30 dic, 1995',
+      'Origen':'Daegu, Corea del Sur',
+      'Solista':'Layover (2023)'}},
+  
+  'Jungkook':{ 
+    role:'Vocalista Principal · Maknae', 
+    color:'linear-gradient(135deg,#B8D4C8,#8AB0A0)', 
+    bio:'Jeon Jungkook, el menor (maknae) de BTS, es el vocalista principal. Apodado el "Golden Maknae" por su versatilidad, su álbum Golden generó múltiples éxitos globales, incluyendo "Standing Next to You".', 
+    facts:{
+      'Nombre real':'Jeon Jungkook',
+      'Nacimiento':'1 sep, 1997',
+      'Origen':'Busan, Corea del Sur',
+      'Solista':'Golden (2023)'}},
 };
 
 const groupAlbums = {
-  '2-cool-4-skool':{ title:'2 Cool 4 Skool', type:'Single Álbum Debut', gradient:'linear-gradient(135deg,#2a2a2a,#555)', meta:{'Lanzamiento':'13 jun, 2013','Sello':'Big Hit Ent.','Canciones':'7','Single':'No More Dream'}, story:'El disco de debut de BTS. Con "No More Dream" el grupo desafió las expectativas de la sociedad coreana sobre los jóvenes. Un comienzo crudo y lleno de actitud que nadie olvidará.', tracks:[{n:1,name:'Intro: 2 Cool 4 Skool',dur:'1:03',sp:'https://open.spotify.com/search/BTS Intro 2 Cool 4 Skool'},{n:2,name:'We Are Bulletproof Pt.2',dur:'3:27',sp:'https://open.spotify.com/search/BTS We Are Bulletproof Pt 2'},{n:3,name:'Skit: Circle Room Talk',dur:'2:01',sp:'https://open.spotify.com/search/BTS Skit Circle Room Talk'},{n:4,name:'No More Dream',dur:'3:42',sp:'https://open.spotify.com/search/BTS No More Dream'},{n:5,name:'Interlude',dur:'1:02',sp:'https://open.spotify.com/search/BTS Interlude 2013'},{n:6,name:'Like',dur:'3:24',sp:'https://open.spotify.com/search/BTS Like 2013'},{n:7,name:'Outro: Circle Room Cypher',dur:'2:12',sp:'https://open.spotify.com/search/BTS Outro Circle Room Cypher'}]},
-  'o-rul8-2':{ title:'O!RUL8,2?', type:'1er Mini Álbum', gradient:'linear-gradient(135deg,#8B0000,#cc0000)', meta:{'Lanzamiento':'11 sep, 2013','Sello':'Big Hit Ent.','Canciones':'9','Single':'N.O'}, story:'El primer mini álbum de BTS. "N.O" desafía el sistema educativo coreano y la presión que sufren los jóvenes. Una declaración de intenciones brillante.', tracks:[{n:1,name:'Intro: O!RUL8,2?',dur:'1:12',sp:'https://open.spotify.com/search/BTS Intro O RUL8 2'},{n:2,name:'N.O',dur:'3:37',sp:'https://open.spotify.com/search/BTS NO'},{n:3,name:'We On',dur:'3:29',sp:'https://open.spotify.com/search/BTS We On'},{n:4,name:'If I Ruled the World',dur:'3:51',sp:'https://open.spotify.com/search/BTS If I Ruled the World'},{n:5,name:'Coffee',dur:'3:31',sp:'https://open.spotify.com/search/BTS Coffee'},{n:6,name:'BTS Cypher PT.1',dur:'3:38',sp:'https://open.spotify.com/search/BTS Cypher PT 1'},{n:7,name:'Attack on Bangtan',dur:'3:28',sp:'https://open.spotify.com/search/BTS Attack on Bangtan'},{n:8,name:'Paldogangsan',dur:'3:52',sp:'https://open.spotify.com/search/BTS Paldogangsan'}]},
-  'skool-luv-affair':{ title:'Skool Luv Affair', type:'2do Mini Álbum', gradient:'linear-gradient(135deg,#2d4a2d,#4a7a4a)', meta:{'Lanzamiento':'12 feb, 2014','Sello':'Big Hit Ent.','Canciones':'11','Single':'Boy in Luv'}, story:'La era Skool concluye con este mini álbum. "Boy in Luv" y "Spine Breaker" muestran a BTS en su etapa más desenfadada, explorando el amor desde la perspectiva de jóvenes irreverentes.', tracks:[{n:1,name:'Intro: Skool Luv Affair',dur:'1:12',sp:'https://open.spotify.com/search/BTS Intro Skool Luv Affair'},{n:2,name:'Boy In Luv',dur:'3:53',sp:'https://open.spotify.com/search/BTS Boy In Luv'},{n:3,name:'Just One Day',dur:'3:34',sp:'https://open.spotify.com/search/BTS Just One Day'},{n:4,name:'Tomorrow',dur:'4:33',sp:'https://open.spotify.com/search/BTS Tomorrow'},{n:5,name:'BTS Cypher PT.2: Triptych',dur:'4:05',sp:'https://open.spotify.com/search/BTS Cypher PT 2'},{n:6,name:'Spine Breaker',dur:'3:35',sp:'https://open.spotify.com/search/BTS Spine Breaker'},{n:7,name:'Jump',dur:'3:28',sp:'https://open.spotify.com/search/BTS Jump'},{n:8,name:'Outro: Propose',dur:'2:42',sp:'https://open.spotify.com/search/BTS Outro Propose'}]},
-  'dark-wild':{ title:'Dark & Wild', type:'1er Álbum de Estudio', gradient:'linear-gradient(135deg,#3C2F2A,#6B4E43)', meta:{'Lanzamiento':'20 ago, 2014','Sello':'Big Hit Ent.','Canciones':'14','Single':'Danger'}, story:'Dark & Wild fue el primer álbum de estudio completo de BTS. Dividido entre la rabia y la pasión, estableció su identidad como artistas que no temían expresar vulnerabilidad y agresividad a la vez.', tracks:[{n:1,name:'Intro: What Am I to You',dur:'3:31',sp:'https://open.spotify.com/track/6oRaVAlQE6j3NJdYM8OfIA'},{n:2,name:'Danger',dur:'4:01',sp:'https://open.spotify.com/track/0e8nrvls6oXZKMpEoFzKs1'},{n:3,name:'War of Hormone',dur:'3:31',sp:'https://open.spotify.com/track/3lCgWLZfmGOQkUMtRmJp8N'},{n:4,name:'Hip Hop Lover',dur:'4:18',sp:'https://open.spotify.com/search/BTS Hip Hop Lover'},{n:5,name:'Let Me Know',dur:'4:10',sp:'https://open.spotify.com/search/BTS Let Me Know'},{n:6,name:'BTS Cypher PT.3: KILLER',feat:'feat. Supreme Boi',dur:'4:18',sp:'https://open.spotify.com/search/BTS Cypher 3 Killer'},{n:7,name:'24/7 = Heaven',dur:'3:43',sp:'https://open.spotify.com/search/BTS 247 Heaven'},{n:8,name:'2nd Grade',dur:'3:47',sp:'https://open.spotify.com/search/BTS 2nd Grade'}]},
-  'hyyh-pt1':{ title:'화양연화 Pt.1', type:'3er Mini Álbum', gradient:'linear-gradient(135deg,#e8c4c4,#c4a0a0)', meta:{'Lanzamiento':'29 abr, 2015','Sello':'Big Hit Ent.','Canciones':'9','Single':'I Need U'}, story:'"I Need U" marcó un antes y un después. Con este EP comienza el universo narrativo de BTS. Las flores de cerezo, el fuego y la juventud efímera se volvieron símbolos eternos.', tracks:[{n:1,name:'I Need U',dur:'3:30',sp:'https://open.spotify.com/search/BTS I Need U'},{n:2,name:'Hold Me Tight',dur:'3:53',sp:'https://open.spotify.com/search/BTS Hold Me Tight'},{n:3,name:'Dope',dur:'3:34',sp:'https://open.spotify.com/search/BTS Dope'},{n:4,name:'Boyz with Fun',dur:'3:28',sp:'https://open.spotify.com/search/BTS Boyz with Fun'},{n:5,name:'Converse High',dur:'3:25',sp:'https://open.spotify.com/search/BTS Converse High'},{n:6,name:'Moving On',dur:'4:04',sp:'https://open.spotify.com/search/BTS Moving On'},{n:7,name:'Outro: Love is Not Over',dur:'3:38',sp:'https://open.spotify.com/search/BTS Outro Love is Not Over'}]},
-  'hyyh-pt2':{ title:'화양연화 Pt.2', type:'4to Mini Álbum', gradient:'linear-gradient(135deg,#a8d8ea,#7ab8d0)', meta:{'Lanzamiento':'30 nov, 2015','Sello':'Big Hit Ent.','Canciones':'9','Single':'Run'}, story:'"Run" profundizó el universo narrativo. Con un videoclip cinematográfico y letras sobre la fugacidad de la juventud, BTS consolidó una era que quedará en la historia del K-pop.', tracks:[{n:1,name:'Intro: Never Mind',feat:'Suga',dur:'2:27',sp:'https://open.spotify.com/search/BTS Intro Never Mind'},{n:2,name:'Run',dur:'3:59',sp:'https://open.spotify.com/search/BTS Run'},{n:3,name:'Butterfly',dur:'5:02',sp:'https://open.spotify.com/search/BTS Butterfly'},{n:4,name:'Whalien 52',dur:'3:59',sp:'https://open.spotify.com/search/BTS Whalien 52'},{n:5,name:'Ma City',dur:'3:47',sp:'https://open.spotify.com/search/BTS Ma City'},{n:6,name:'Silver Spoon',dur:'3:24',sp:'https://open.spotify.com/search/BTS Silver Spoon'},{n:7,name:'Autumn Leaves',dur:'5:02',sp:'https://open.spotify.com/search/BTS Autumn Leaves'}]},
-  'young-forever':{ title:'화양연화 Young Forever', type:'Álbum Especial', gradient:'linear-gradient(135deg,#f5e642,#e8c830)', meta:{'Lanzamiento':'2 may, 2016','Sello':'Big Hit Ent.','Canciones':'23','Singles':'Young Forever / Fire'}, story:'La compilación definitiva de la era HYYH con "Fire" y "Young Forever". Un himno generacional que cerró la era más emotiva de BTS.', tracks:[{n:1,name:'Epilogue: Young Forever',dur:'4:57',sp:'https://open.spotify.com/search/BTS Epilogue Young Forever'},{n:2,name:'Fire',dur:'3:23',sp:'https://open.spotify.com/search/BTS Fire'},{n:3,name:'Save Me',dur:'3:50',sp:'https://open.spotify.com/search/BTS Save Me'},{n:4,name:'I Need U',dur:'3:30',sp:'https://open.spotify.com/search/BTS I Need U'},{n:5,name:'Run',dur:'3:59',sp:'https://open.spotify.com/search/BTS Run'},{n:6,name:'Dope',dur:'3:34',sp:'https://open.spotify.com/search/BTS Dope'}]},
-  'wings':{ title:'Wings', type:'2do Álbum de Estudio', gradient:'linear-gradient(135deg,#1a2a3a,#2d4a6a)', meta:{'Lanzamiento':'10 oct, 2016','Sello':'Big Hit Ent.','Canciones':'15','Single':'Blood Sweat & Tears'}, story:'Inspirado en "Demian" de Hesse, Wings fue un punto de inflexión artístico. "Blood Sweat & Tears" rompió récords en Asia y marcó el primer gran paso hacia el reconocimiento internacional.', tracks:[{n:1,name:'Intro: Boy Meets Evil',dur:'3:27',sp:'https://open.spotify.com/search/BTS Intro Boy Meets Evil'},{n:2,name:'Blood Sweat & Tears',dur:'3:37',sp:'https://open.spotify.com/track/5Wd2bPkLovMZxYKp8qQKpV'},{n:3,name:'Begin',feat:'Jungkook',dur:'3:37',sp:'https://open.spotify.com/search/BTS Begin Wings'},{n:4,name:'Lie',feat:'Jimin',dur:'4:02',sp:'https://open.spotify.com/search/BTS Lie Jimin'},{n:5,name:'Stigma',feat:'V',dur:'3:42',sp:'https://open.spotify.com/search/BTS Stigma V'},{n:6,name:'First Love',feat:'Suga',dur:'4:52',sp:'https://open.spotify.com/search/BTS First Love Suga'},{n:7,name:'Reflection',feat:'RM',dur:'4:22',sp:'https://open.spotify.com/search/BTS Reflection RM'},{n:8,name:'MAMA',feat:'J-Hope',dur:'3:56',sp:'https://open.spotify.com/search/BTS MAMA J-Hope'},{n:9,name:'Awake',feat:'Jin',dur:'4:30',sp:'https://open.spotify.com/search/BTS Awake Jin'},{n:10,name:'Lost',dur:'4:01',sp:'https://open.spotify.com/search/BTS Lost Wings'},{n:11,name:'BTS Cypher 4',dur:'4:45',sp:'https://open.spotify.com/search/BTS Cypher 4'},{n:12,name:'21st Century Girl',dur:'3:37',sp:'https://open.spotify.com/search/BTS 21st Century Girl'}]},
-  'you-never-walk-alone':{ title:'You Never Walk Alone', type:'Mini Álbum Especial', gradient:'linear-gradient(135deg,#a8d8c8,#6ab0a0)', meta:{'Lanzamiento':'13 feb, 2017','Sello':'Big Hit Ent.','Canciones':'10','Singles':'Spring Day / Not Today'}, story:'"Spring Day" se convirtió en un himno eterno. Años después sigue siendo una de las canciones más escuchadas de BTS.', tracks:[{n:1,name:'Spring Day',dur:'4:56',sp:'https://open.spotify.com/search/BTS Spring Day'},{n:2,name:'Not Today',dur:'3:40',sp:'https://open.spotify.com/search/BTS Not Today'},{n:3,name:'A Supplementary Story: You Never Walk Alone',dur:'4:00',sp:'https://open.spotify.com/search/BTS You Never Walk Alone'}]},
-  'ly-her':{ title:'Love Yourself: Her', type:'5to Mini Álbum', gradient:'linear-gradient(135deg,#b8d4f0,#8ab0e0)', meta:{'Lanzamiento':'18 sep, 2017','Sello':'Big Hit Ent.','Canciones':'9','Single':'DNA'}, story:'"DNA" fue el primer K-pop en el top 10 del Billboard Hot 100. La serie Love Yourself comenzó aquí, explorando la euforia del enamoramiento.', tracks:[{n:1,name:'Intro: Serendipity',feat:'Jimin',dur:'3:23',sp:'https://open.spotify.com/search/BTS Intro Serendipity'},{n:2,name:'DNA',dur:'3:43',sp:'https://open.spotify.com/track/7CilDQdBGRXs8sDRZsUnQX'},{n:3,name:'Best of Me',dur:'3:35',sp:'https://open.spotify.com/search/BTS Best of Me'},{n:4,name:'MIC Drop',dur:'3:43',sp:'https://open.spotify.com/search/BTS MIC Drop'},{n:5,name:'Go Go',dur:'3:32',sp:'https://open.spotify.com/search/BTS Go Go'},{n:6,name:'Outro: Her',feat:'J-Hope',dur:'2:56',sp:'https://open.spotify.com/search/BTS Outro Her'}]},
-  'fake-love':{ title:'Fake Love / Airplane Pt.2', type:'Single Japonés', gradient:'linear-gradient(135deg,#c8d8e8,#a0b8cc)', meta:{'Lanzamiento':'16 jul, 2018','Sello':'Universal Music Japan','Canciones':'3','Single':'Fake Love'}, story:'"Fake Love" en japonés. Explora el dolor de una relación donde perdiste tu identidad por amor.', tracks:[{n:1,name:'FAKE LOVE (Japanese Ver.)',dur:'4:02',sp:'https://open.spotify.com/search/BTS Fake Love Japanese'},{n:2,name:'Airplane pt.2 (Japanese Ver.)',dur:'3:33',sp:'https://open.spotify.com/search/BTS Airplane Pt 2 Japanese'},{n:3,name:'So What',dur:'3:12',sp:'https://open.spotify.com/search/BTS So What'}]},
-  'ly-tear':{ title:'Love Yourself: Tear', type:'3er Álbum de Estudio', gradient:'linear-gradient(135deg,#1a1a3a,#3a3a6a)', meta:{'Lanzamiento':'18 may, 2018','Sello':'Big Hit Ent.','Canciones':'11','Single':'Fake Love'}, story:'El primer álbum de BTS en debutar #1 en Billboard 200. Enfrenta el lado oscuro del amor: la ruptura y la angustia de perder la identidad por otro.', tracks:[{n:1,name:'Intro: Singularity',feat:'V',dur:'3:47',sp:'https://open.spotify.com/search/BTS Intro Singularity'},{n:2,name:'Fake Love',dur:'4:02',sp:'https://open.spotify.com/track/3Nz7fSM7FuNSBRQxG2xaES'},{n:3,name:'The Truth Untold',dur:'4:11',sp:'https://open.spotify.com/search/BTS The Truth Untold'},{n:4,name:'134340',dur:'4:20',sp:'https://open.spotify.com/search/BTS 134340'},{n:5,name:'Magic Shop',dur:'5:15',sp:'https://open.spotify.com/search/BTS Magic Shop'},{n:6,name:'Airplane pt.2',dur:'3:33',sp:'https://open.spotify.com/search/BTS Airplane Pt 2'},{n:7,name:'Anpanman',dur:'3:13',sp:'https://open.spotify.com/search/BTS Anpanman'},{n:8,name:'Outro: Tear',feat:'RM, Suga, J-Hope',dur:'3:39',sp:'https://open.spotify.com/search/BTS Outro Tear'}]},
-  'ly-answer':{ title:'Love Yourself: Answer', type:'Repackage', gradient:'linear-gradient(135deg,#f0a8c8,#d878a8)', meta:{'Lanzamiento':'24 ago, 2018','Sello':'Big Hit Ent.','Canciones':'26','Singles':'IDOL / Im Fine'}, story:'El cierre de la trilogía Love Yourself. "IDOL" celebra la identidad sin disculpas. El discurso de RM en la ONU acompañó este lanzamiento.', tracks:[{n:1,name:'Euphoria',feat:'Jungkook',dur:'3:59',sp:'https://open.spotify.com/search/BTS Euphoria'},{n:2,name:'DNA',dur:'3:43',sp:'https://open.spotify.com/track/7CilDQdBGRXs8sDRZsUnQX'},{n:3,name:'IDOL',dur:'3:41',sp:'https://open.spotify.com/track/3TGBn7UNjDK3oU4uFAlRwp'},{n:4,name:'Fake Love',dur:'4:02',sp:'https://open.spotify.com/track/3Nz7fSM7FuNSBRQxG2xaES'},{n:5,name:'Epiphany',feat:'Jin',dur:'3:59',sp:'https://open.spotify.com/search/BTS Epiphany'},{n:6,name:'Answer: Love Myself',dur:'3:57',sp:'https://open.spotify.com/search/BTS Answer Love Myself'}]},
-  'face-yourself':{ title:'Face Yourself', type:'Álbum Japonés', gradient:'linear-gradient(135deg,#d0a8d8,#a878b8)', meta:{'Lanzamiento':'4 abr, 2018','Sello':'Universal Music Japan','Canciones':'12','Single':'Dont Leave Me'}, story:'El cuarto álbum japonés de BTS. Explora la autoaceptación con un sonido más maduro.', tracks:[{n:1,name:'Dont Leave Me',dur:'3:43',sp:'https://open.spotify.com/search/BTS Dont Leave Me'},{n:2,name:'Let Go',dur:'4:01',sp:'https://open.spotify.com/search/BTS Let Go'},{n:3,name:'DNA (Japanese Ver.)',dur:'3:43',sp:'https://open.spotify.com/search/BTS DNA Japanese'},{n:4,name:'Fake Love (Japanese Ver.)',dur:'4:02',sp:'https://open.spotify.com/search/BTS Fake Love Japanese'}]},
-  'mots-persona':{ title:'Map of the Soul: Persona', type:'6to Mini Álbum', gradient:'linear-gradient(135deg,#ff6fa8,#ff3d7a)', meta:{'Lanzamiento':'12 abr, 2019','Sello':'Big Hit Ent.','Canciones':'7','Single':'Boy With Luv'}, story:'"Boy With Luv" con Halsey batió el récord de YouTube en 24 horas. Una exploración del concepto jungiano de la Persona.', tracks:[{n:1,name:'Intro: Persona',feat:'RM',dur:'3:15',sp:'https://open.spotify.com/search/BTS Intro Persona'},{n:2,name:'Boy With Luv',feat:'feat. Halsey',dur:'3:49',sp:'https://open.spotify.com/track/5KawlOMHjWeUjQtnuRs22c'},{n:3,name:'Mikrokosmos',dur:'3:59',sp:'https://open.spotify.com/search/BTS Mikrokosmos'},{n:4,name:'Make It Right',dur:'3:31',sp:'https://open.spotify.com/search/BTS Make It Right'},{n:5,name:'HOME',dur:'3:28',sp:'https://open.spotify.com/search/BTS HOME'},{n:6,name:'Jamais Vu',feat:'Jin, J-Hope, Jungkook',dur:'5:01',sp:'https://open.spotify.com/search/BTS Jamais Vu'},{n:7,name:'Dionysus',dur:'4:03',sp:'https://open.spotify.com/search/BTS Dionysus'}]},
-  'bts-world':{ title:'BTS World OST', type:'Banda Sonora', gradient:'linear-gradient(135deg,#e8a0c8,#c870a8)', meta:{'Lanzamiento':'2 jun, 2019','Sello':'Big Hit Ent.','Canciones':'17','Single':'Dream Glow'}, story:'La banda sonora del juego móvil oficial "BTS World" con colaboraciones de artistas internacionales.', tracks:[{n:1,name:'Dream Glow',feat:'BTS & Charli XCX',dur:'3:03',sp:'https://open.spotify.com/search/BTS Dream Glow Charli XCX'},{n:2,name:'A Brand New Day',feat:'BTS & Zara Larsson',dur:'3:06',sp:'https://open.spotify.com/search/BTS A Brand New Day Zara Larsson'},{n:3,name:'All Night',feat:'BTS & Juice WRLD',dur:'3:28',sp:'https://open.spotify.com/search/BTS All Night Juice WRLD'}]},
-  'lights-bwl':{ title:'Lights / Boy With Luv', type:'Single Japonés', gradient:'linear-gradient(135deg,#a8e0f0,#78c0d8)', meta:{'Lanzamiento':'3 jul, 2019','Sello':'Universal Music Japan','Canciones':'3','Single':'Lights'}, story:'"Lights" habla de la luz que los fans representan para BTS — una declaración de amor mutuo envuelta en una melodía irresistible.', tracks:[{n:1,name:'Lights',dur:'3:36',sp:'https://open.spotify.com/search/BTS Lights Japanese'},{n:2,name:'Boy With Luv (Japanese Ver.)',dur:'3:49',sp:'https://open.spotify.com/search/BTS Boy With Luv Japanese'}]},
-  'mots':{ title:'Map of the Soul: 7', type:'4to Álbum de Estudio', gradient:'linear-gradient(135deg,#1a3a2a,#2d6a4a)', meta:{'Lanzamiento':'21 feb, 2020','Sello':'Big Hit Ent.','Canciones':'20','Singles':'ON / Black Swan'}, story:'El álbum más ambicioso de BTS. "ON" llegó con un MV épico. Debutó #1 en 20 países. Consolidó a BTS como el acto más grande del planeta.', tracks:[{n:1,name:'Interlude: Shadow',feat:'Suga',dur:'3:46',sp:'https://open.spotify.com/search/BTS Interlude Shadow'},{n:2,name:'Black Swan',dur:'3:44',sp:'https://open.spotify.com/search/BTS Black Swan'},{n:3,name:'Filter',feat:'Jimin',dur:'3:30',sp:'https://open.spotify.com/search/BTS Filter Jimin'},{n:4,name:'ON',dur:'4:06',sp:'https://open.spotify.com/search/BTS ON Map of the Soul'},{n:5,name:'Moon',feat:'Jin',dur:'3:47',sp:'https://open.spotify.com/search/BTS Moon Jin'},{n:6,name:'Boy With Luv',feat:'Halsey',dur:'3:49',sp:'https://open.spotify.com/track/5KawlOMHjWeUjQtnuRs22c'},{n:7,name:'Inner Child',feat:'V',dur:'4:08',sp:'https://open.spotify.com/search/BTS Inner Child V'},{n:8,name:'Friends',feat:'Jimin & V',dur:'3:34',sp:'https://open.spotify.com/search/BTS Friends Jimin V'},{n:9,name:'Outro: Ego',feat:'J-Hope',dur:'3:57',sp:'https://open.spotify.com/search/BTS Outro Ego'}]},
-  'dynamite':{ title:'Dynamite', type:'Single Digital', gradient:'linear-gradient(135deg,#f8f8f8,#e0e0e0)', meta:{'Lanzamiento':'21 ago, 2020','Sello':'Big Hit Ent.','Canciones':'2','Single':'Dynamite'}, story:'El primer single en inglés de BTS. Debutó #1 en el Billboard Hot 100, el primer grupo coreano en lograrlo.', tracks:[{n:1,name:'Dynamite',dur:'3:20',sp:'https://open.spotify.com/track/3yF5QSCnvOkFGmNFDqqwnM'},{n:2,name:'Dynamite (Instrumental)',dur:'3:20',sp:'https://open.spotify.com/search/BTS Dynamite Instrumental'}]},
-  'be':{ title:'BE', type:'5to Álbum de Estudio', gradient:'linear-gradient(135deg,#3a2a1a,#6a4a2d)', meta:{'Lanzamiento':'20 nov, 2020','Sello':'Big Hit Ent.','Canciones':'8','Single':'Life Goes On'}, story:'Nacido de la pandemia. Cada integrante tuvo control creativo. "Life Goes On" fue una promesa de que la vida continuaría.', tracks:[{n:1,name:'Life Goes On',dur:'3:31',sp:'https://open.spotify.com/search/BTS Life Goes On'},{n:2,name:'Fly To My Room',dur:'3:43',sp:'https://open.spotify.com/search/BTS Fly To My Room'},{n:3,name:'Blue & Grey',dur:'4:43',sp:'https://open.spotify.com/search/BTS Blue Grey'},{n:4,name:'Telepathy',dur:'3:03',sp:'https://open.spotify.com/search/BTS Telepathy'},{n:5,name:'Dis-ease',dur:'3:52',sp:'https://open.spotify.com/search/BTS Dis-ease'},{n:6,name:'Stay',dur:'2:52',sp:'https://open.spotify.com/search/BTS Stay BE'},{n:7,name:'Dynamite',dur:'3:20',sp:'https://open.spotify.com/track/3yF5QSCnvOkFGmNFDqqwnM'}]},
-  'butter':{ title:'Butter', type:'Single Digital', gradient:'linear-gradient(135deg,#f5c842,#e0a820)', meta:{'Lanzamiento':'21 may, 2021','Sello':'Big Hit Ent.','Canciones':'2','Single':'Butter'}, story:'"Butter" pasó 10 semanas en el #1 del Billboard Hot 100. Con "Permission to Dance" como cara B, fue imparable en el verano de 2021.', tracks:[{n:1,name:'Butter',dur:'2:44',sp:'https://open.spotify.com/track/1mea3bSkSGXuIRvnydlB5b'},{n:2,name:'Permission to Dance',dur:'3:17',sp:'https://open.spotify.com/search/BTS Permission to Dance'}]},
-  'bts-the-best':{ title:'BTS, The Best', type:'Compilación Japonesa', gradient:'linear-gradient(135deg,#9a70d8,#7848c0)', meta:{'Lanzamiento':'16 jun, 2021','Sello':'Universal Music Japan','Canciones':'26','Single':'Film Out'}, story:'La compilación más completa del catálogo japonés de BTS con "Film Out" y "Stay Gold".', tracks:[{n:1,name:'Film Out',dur:'3:36',sp:'https://open.spotify.com/search/BTS Film Out'},{n:2,name:'Stay Gold',dur:'3:15',sp:'https://open.spotify.com/search/BTS Stay Gold'},{n:3,name:'Lights',dur:'3:36',sp:'https://open.spotify.com/search/BTS Lights'},{n:4,name:'Dynamite',dur:'3:20',sp:'https://open.spotify.com/track/3yF5QSCnvOkFGmNFDqqwnM'}]},
-  'proof':{ title:'Proof', type:'Álbum Antología', gradient:'linear-gradient(135deg,#1a1a3a,#2d2d6a)', meta:{'Lanzamiento':'10 jun, 2022','Sello':'HYBE','Discos':'3 CDs · 48 canciones','Single':'Yet To Come'}, story:'Celebración del camino recorrido y carta de amor al ARMY antes del servicio militar. "Yet To Come" declaró que lo mejor estaba por venir.', tracks:[{n:1,name:'Born Singer',dur:'4:23',sp:'https://open.spotify.com/search/BTS Born Singer'},{n:2,name:'No More Dream',dur:'3:43',sp:'https://open.spotify.com/search/BTS No More Dream'},{n:3,name:'Butter',dur:'2:44',sp:'https://open.spotify.com/track/1mea3bSkSGXuIRvnydlB5b'},{n:4,name:'Yet To Come',dur:'3:15',sp:'https://open.spotify.com/search/BTS Yet To Come'},{n:5,name:'Spring Day',dur:'4:56',sp:'https://open.spotify.com/search/BTS Spring Day'},{n:6,name:'I Need U',dur:'3:30',sp:'https://open.spotify.com/search/BTS I Need U'}]},
+  '2-cool-4-skool':{ 
+    title:'2 Cool 4 Skool', 
+    type:'Single Álbum Debut', 
+    gradient:'linear-gradient(135deg,#2a2a2a,#555)', 
+    meta:{
+      'Lanzamiento':'13 jun, 2013',
+      'Sello':'Big Hit Ent.',
+      'Canciones':'7',
+      'Single':'No More Dream'}, 
+    story:'El disco de debut de BTS. Con "No More Dream" el grupo desafió las expectativas de la sociedad coreana sobre los jóvenes. Un comienzo crudo y lleno de actitud que nadie olvidará.', 
+    tracks:[
+      {n:1,name:'Intro: 2 Cool 4 Skool',dur:'1:03',sp:'https://open.spotify.com/search/BTS Intro 2 Cool 4 Skool'},
+      {n:2,name:'We Are Bulletproof Pt.2',dur:'3:27',sp:'https://open.spotify.com/search/BTS We Are Bulletproof Pt 2'},
+      {n:3,name:'Skit: Circle Room Talk',dur:'2:01',sp:'https://open.spotify.com/search/BTS Skit Circle Room Talk'},
+      {n:4,name:'No More Dream',dur:'3:42',sp:'https://open.spotify.com/search/BTS No More Dream'},
+      {n:5,name:'Interlude',dur:'1:02',sp:'https://open.spotify.com/search/BTS Interlude 2013'},
+      {n:6,name:'Like',dur:'3:24',sp:'https://open.spotify.com/search/BTS Like 2013'},
+      {n:7,name:'Outro: Circle Room Cypher',dur:'2:12',sp:'https://open.spotify.com/search/BTS Outro Circle Room Cypher'}]},
+  
+  'o-rul8-2':{ 
+    title:'O!RUL8,2?', 
+    type:'1er Mini Álbum', 
+    gradient:'linear-gradient(135deg,#8B0000,#cc0000)', 
+    meta:{
+      'Lanzamiento':'11 sep, 2013',
+      'Sello':'Big Hit Ent.',
+      'Canciones':'10',
+      'Single':'N.O'}, 
+    story:'El primer mini álbum de BTS. "N.O" desafía el sistema educativo coreano y la presión que sufren los jóvenes. Una declaración de intenciones brillante.', 
+    tracks:[
+      {n:1,name:'Intro: O!RUL8,2?',dur:'1:12',sp:'https://open.spotify.com/search/BTS Intro O RUL8 2'},
+      {n:2,name:'N.O',dur:'3:37',sp:'https://open.spotify.com/intl-es/track/7JosxtkCqIQieNWXA2Dj3v?si=0759a21e58974435 NO'},
+      {n:3,name:'We On',dur:'3:29',sp:'https://open.spotify.com/search/BTS We On'},
+      {n:4,name:'Skit: R U Happy Now?',dur:'2:28',sp:'https://open.spotify.com/intl-es/track/53XrsilgguJmmsEtDsj0yY?si=2cffbf6e1f6649ce Skit: R U Happy Now?'},
+      {n:5,name:'If I Ruled The World',dur:'4:07',sp:'https://open.spotify.com/intl-es/track/4bLtrrVDspeDNSaHGGMQkB?si=321c38e5e7ff4de3 If I Ruled The World'},
+      {n:6,name:'Coffee',dur:'4:20',sp:'https://open.spotify.com/intl-es/track/4eqHEzFsCCiGALC1MHbqnU?si=8a89bad6ed414407 Coffee'},
+      {n:7,name:'BTS Cypher Pt.1',dur:'2:11',sp:'https://open.spotify.com/intl-es/track/3KkbZok84es6JqI5aiLj1g?si=ecfdb3ef492540a4 BTS Cypher Pt.1'},
+      {n:8,name:'Attack On Bangtan',dur:'4:06',sp:'https://open.spotify.com/intl-es/track/06PapYCtVDlprJPgGELabn?si=34d9b48e842d41fa Attack On Bangtan'},
+      {n:9,name:'Paldogangsan',dur:'3:25',sp:'https://open.spotify.com/intl-es/track/3VlYMpSmYooLpzLiRBBfbX?si=b7ae22e6aaa54c21 Paldogangsan'},
+      {n:10,name:'Outro: Luv In Skool',dur:'1:26',sp:'https://open.spotify.com/intl-es/track/2ZiVvIvwAwNRL4dUO3TaF6?si=0d3f923376ee4fff Outro: Luv In Skool'}]},
+  
+  'skool-luv-affair':{ 
+    title:'Skool Luv Affair', 
+    type:'2do Mini Álbum', 
+    gradient:'linear-gradient(135deg,#2d4a2d,#4a7a4a)',
+    meta:{
+      'Lanzamiento':'12 feb, 2014',
+      'Sello':'Big Hit Ent.',
+      'Canciones':'10',
+      'Single':'Boy in Luv'}, 
+    story:'La era Skool concluye con este mini álbum. "Boy in Luv" y "Spine Breaker" muestran a BTS en su etapa más desenfadada, explorando el amor desde la perspectiva de jóvenes irreverentes.', 
+    tracks:[
+      {n:1,name:'Intro: Skool Luv Affair',dur:'1:12',sp:'https://open.spotify.com/search/BTS Intro Skool Luv Affair'},
+      {n:2,name:'Boy In Luv',dur:'3:53',sp:'https://open.spotify.com/search/BTS Boy In Luv'},
+      {n:3,name:'Skit: Soulmate',dur:'1:32',sp:'https://open.spotify.com/search/BTS Skit: Soulmate'},
+      {n:4,name:'Where You From',dur:'4:00',sp:'https://open.spotify.com/intl-es/track/0nZaV8LwxHeg8TqFy193IL?si=f7295b9363d544a3 Where You From'},
+      {n:5,name:'Just One Day',dur:'3:59',sp:'https://open.spotify.com/intl-es/track/6t7WriKgVszATnrdBKSUAf?si=a1a3be14b14f4fc7 Just One Day'},
+      {n:6,name:'Tomorrow',dur:'4:21',sp:'https://open.spotify.com/intl-es/track/0JkTVcN5kilfMztDb3bKZk?si=aa4dbdf9997d44f6 Tomorrow'},
+      {n:7,name:'BTS Cypher Pt.2: Triptych',dur:'4:48',sp:'https://open.spotify.com/intl-es/track/41eoHn3yTDYMV9hFn50ef4?si=74f3e1720ab44b5a BTS Cypher Pt.2: Triptych'},
+      {n:8,name:'Spine Breaker',dur:'3:58',sp:'https://open.spotify.com/intl-es/track/0F3Dpp18yIxIm7XRmn0LBj?si=404c05c2a89e4cd5 Spine Breaker'},
+      {n:9,name:'JUMP',dur:'3:56',sp:'https://open.spotify.com/intl-es/track/1jZZm43y7RPuwjJQ5LrGHe?si=73805a32f5ee4389 JUMP'},
+      {n:10,name:'Outro: Prupose',dur:'2:02',sp:'https://open.spotify.com/intl-es/track/3x0SuB95K0XewiAKwNEiMZ?si=4b487f9081d94c40 Outro: Prupose'}]},
+  
+  'dark-wild':{ 
+    title:'Dark & Wild', 
+    type:'1er Álbum de Estudio', 
+    gradient:'linear-gradient(135deg,#3C2F2A,#6B4E43)', 
+    meta:{
+      'Lanzamiento':'20 ago, 2014',
+      'Sello':'Big Hit Ent.',
+      'Canciones':'14',
+      'Single':'Danger'}, 
+    story:'Dark & Wild fue el primer álbum de estudio completo de BTS. Dividido entre la rabia y la pasión, estableció su identidad como artistas que no temían expresar vulnerabilidad y agresividad a la vez.', 
+    tracks:[
+      {n:1,name:'Intro: What Am I to You',dur:'3:31',sp:'https://open.spotify.com/track/6oRaVAlQE6j3NJdYM8OfIA'},
+      {n:2,name:'Danger',dur:'4:01',sp:'https://open.spotify.com/track/0e8nrvls6oXZKMpEoFzKs1'},
+      {n:3,name:'War of Hormone',dur:'3:31',sp:'https://open.spotify.com/track/3lCgWLZfmGOQkUMtRmJp8N'},
+      {n:4,name:'Hip Hop Lover',dur:'4:18',sp:'https://open.spotify.com/search/BTS Hip Hop Lover'},
+      {n:5,name:'Let Me Know',dur:'4:10',sp:'https://open.spotify.com/search/BTS Let Me Know'},
+      {n:6,name:'BTS Cypher PT.3: KILLER',feat:'feat. Supreme Boi',dur:'4:18',sp:'https://open.spotify.com/search/BTS Cypher 3 Killer'},
+      {n:7,name:'24/7 = Heaven',dur:'3:43',sp:'https://open.spotify.com/search/BTS 247 Heaven'},
+      {n:8,name:'2nd Grade',dur:'3:47',sp:'https://open.spotify.com/search/BTS 2nd Grade'}]},
+  
+  'hyyh-pt1':{ 
+    title:'화양연화 Pt.1', 
+    type:'3er Mini Álbum', 
+    gradient:'linear-gradient(135deg,#e8c4c4,#c4a0a0)',
+    meta:{
+      'Lanzamiento':'29 abr, 2015',
+      'Sello':'Big Hit Ent.',
+      'Canciones':'9',
+      'Single':'I Need U'}, 
+    story:'"I Need U" marcó un antes y un después. Con este EP comienza el universo narrativo de BTS. Las flores de cerezo, el fuego y la juventud efímera se volvieron símbolos eternos.', 
+    tracks:[
+      {n:1,name:'I Need U',dur:'3:30',sp:'https://open.spotify.com/search/BTS I Need U'},
+      {n:2,name:'Hold Me Tight',dur:'3:53',sp:'https://open.spotify.com/search/BTS Hold Me Tight'},
+      {n:3,name:'Dope',dur:'3:34',sp:'https://open.spotify.com/search/BTS Dope'},
+      {n:4,name:'Boyz with Fun',dur:'3:28',sp:'https://open.spotify.com/search/BTS Boyz with Fun'},
+      {n:5,name:'Converse High',dur:'3:25',sp:'https://open.spotify.com/search/BTS Converse High'},
+      {n:6,name:'Moving On',dur:'4:04',sp:'https://open.spotify.com/search/BTS Moving On'},
+      {n:7,name:'Outro: Love is Not Over',dur:'3:38',sp:'https://open.spotify.com/search/BTS Outro Love is Not Over'}]},
+  
+  'hyyh-pt2':{ 
+    title:'화양연화 Pt.2', 
+    type:'4to Mini Álbum', 
+    gradient:'linear-gradient(135deg,#a8d8ea,#7ab8d0)', 
+    meta:{
+      'Lanzamiento':'30 nov, 2015',
+      'Sello':'Big Hit Ent.',
+      'Canciones':'9',
+      'Single':'Run'}, 
+    story:'"Run" profundizó el universo narrativo. Con un videoclip cinematográfico y letras sobre la fugacidad de la juventud, BTS consolidó una era que quedará en la historia del K-pop.', 
+    tracks:[
+      {n:1,name:'Intro: Never Mind',feat:'Suga',dur:'2:27',sp:'https://open.spotify.com/search/BTS Intro Never Mind'},
+      {n:2,name:'Run',dur:'3:59',sp:'https://open.spotify.com/search/BTS Run'},
+      {n:3,name:'Butterfly',dur:'5:02',sp:'https://open.spotify.com/search/BTS Butterfly'},
+      {n:4,name:'Whalien 52',dur:'3:59',sp:'https://open.spotify.com/search/BTS Whalien 52'},
+      {n:5,name:'Ma City',dur:'3:47',sp:'https://open.spotify.com/search/BTS Ma City'},
+      {n:6,name:'Silver Spoon',dur:'3:24',sp:'https://open.spotify.com/search/BTS Silver Spoon'},
+      {n:7,name:'Autumn Leaves',dur:'5:02',sp:'https://open.spotify.com/search/BTS Autumn Leaves'}]},
+  
+  'young-forever':{ 
+    title:'화양연화 Young Forever', 
+    type:'Álbum Especial', 
+    gradient:'linear-gradient(135deg,#f5e642,#e8c830)', 
+    meta:{
+      'Lanzamiento':'2 may, 2016',
+      'Sello':'Big Hit Ent.',
+      'Canciones':'23',
+      'Singles':'Young Forever / Fire'}, 
+    story:'La compilación definitiva de la era HYYH con "Fire" y "Young Forever". Un himno generacional que cerró la era más emotiva de BTS.', 
+    tracks:[
+      {n:1,name:'Epilogue: Young Forever',dur:'4:57',sp:'https://open.spotify.com/search/BTS Epilogue Young Forever'},
+      {n:2,name:'Fire',dur:'3:23',sp:'https://open.spotify.com/search/BTS Fire'},
+      {n:3,name:'Save Me',dur:'3:50',sp:'https://open.spotify.com/search/BTS Save Me'},
+      {n:4,name:'I Need U',dur:'3:30',sp:'https://open.spotify.com/search/BTS I Need U'},
+      {n:5,name:'Run',dur:'3:59',sp:'https://open.spotify.com/search/BTS Run'},
+      {n:6,name:'Dope',dur:'3:34',sp:'https://open.spotify.com/search/BTS Dope'}]},
+  
+  'wings':{ 
+    title:'Wings', 
+    type:'2do Álbum de Estudio', 
+    gradient:'linear-gradient(135deg,#1a2a3a,#2d4a6a)', 
+    meta:{
+      'Lanzamiento':'10 oct, 2016',
+      'Sello':'Big Hit Ent.',
+      'Canciones':'15',
+      'Single':'Blood Sweat & Tears'}, 
+    story:'Inspirado en "Demian" de Hesse, Wings fue un punto de inflexión artístico. "Blood Sweat & Tears" rompió récords en Asia y marcó el primer gran paso hacia el reconocimiento internacional.', 
+    tracks:[
+      {n:1,name:'Intro: Boy Meets Evil',dur:'3:27',sp:'https://open.spotify.com/search/BTS Intro Boy Meets Evil'},
+      {n:2,name:'Blood Sweat & Tears',dur:'3:37',sp:'https://open.spotify.com/track/5Wd2bPkLovMZxYKp8qQKpV'},
+      {n:3,name:'Begin',feat:'Jungkook',dur:'3:37',sp:'https://open.spotify.com/search/BTS Begin Wings'},
+      {n:4,name:'Lie',feat:'Jimin',dur:'4:02',sp:'https://open.spotify.com/search/BTS Lie Jimin'},
+      {n:5,name:'Stigma',feat:'V',dur:'3:42',sp:'https://open.spotify.com/search/BTS Stigma V'},
+      {n:6,name:'First Love',feat:'Suga',dur:'4:52',sp:'https://open.spotify.com/search/BTS First Love Suga'},
+      {n:7,name:'Reflection',feat:'RM',dur:'4:22',sp:'https://open.spotify.com/search/BTS Reflection RM'},
+      {n:8,name:'MAMA',feat:'J-Hope',dur:'3:56',sp:'https://open.spotify.com/search/BTS MAMA J-Hope'},
+      {n:9,name:'Awake',feat:'Jin',dur:'4:30',sp:'https://open.spotify.com/search/BTS Awake Jin'},
+      {n:10,name:'Lost',dur:'4:01',sp:'https://open.spotify.com/search/BTS Lost Wings'},
+      {n:11,name:'BTS Cypher 4',dur:'4:45',sp:'https://open.spotify.com/search/BTS Cypher 4'},
+      {n:12,name:'21st Century Girl',dur:'3:37',sp:'https://open.spotify.com/search/BTS 21st Century Girl'}]},
+  
+  'you-never-walk-alone':{ 
+    title:'You Never Walk Alone', 
+    type:'Mini Álbum Especial',
+    gradient:'linear-gradient(135deg,#a8d8c8,#6ab0a0)', 
+    meta:{
+      'Lanzamiento':'13 feb, 2017',
+      'Sello':'Big Hit Ent.',
+      'Canciones':'10',
+      'Singles':'Spring Day / Not Today'}, 
+    story:'"Spring Day" se convirtió en un himno eterno. Años después sigue siendo una de las canciones más escuchadas de BTS.', 
+    tracks:[
+      {n:1,name:'Spring Day',dur:'4:56',sp:'https://open.spotify.com/search/BTS Spring Day'},
+      {n:2,name:'Not Today',dur:'3:40',sp:'https://open.spotify.com/search/BTS Not Today'},
+      {n:3,name:'A Supplementary Story: You Never Walk Alone',dur:'4:00',sp:'https://open.spotify.com/search/BTS You Never Walk Alone'}]},
+  
+  'ly-her':{ 
+    title:'Love Yourself: Her', 
+    type:'5to Mini Álbum', 
+    gradient:'linear-gradient(135deg,#b8d4f0,#8ab0e0)', 
+    meta:{
+      'Lanzamiento':'18 sep, 2017',
+      'Sello':'Big Hit Ent.',
+      'Canciones':'9',
+      'Single':'DNA'}, 
+    story:'"DNA" fue el primer K-pop en el top 10 del Billboard Hot 100. La serie Love Yourself comenzó aquí, explorando la euforia del enamoramiento.', tracks:[
+      {n:1,name:'Intro: Serendipity',feat:'Jimin',dur:'3:23',sp:'https://open.spotify.com/search/BTS Intro Serendipity'},
+      {n:2,name:'DNA',dur:'3:43',sp:'https://open.spotify.com/track/7CilDQdBGRXs8sDRZsUnQX'},
+      {n:3,name:'Best of Me',dur:'3:35',sp:'https://open.spotify.com/search/BTS Best of Me'},
+      {n:4,name:'MIC Drop',dur:'3:43',sp:'https://open.spotify.com/search/BTS MIC Drop'},
+      {n:5,name:'Go Go',dur:'3:32',sp:'https://open.spotify.com/search/BTS Go Go'},
+      {n:6,name:'Outro: Her',feat:'J-Hope',dur:'2:56',sp:'https://open.spotify.com/search/BTS Outro Her'}]},
+  
+  'fake-love':{ 
+    title:'Fake Love / Airplane Pt.2', 
+    type:'Single Japonés', 
+    gradient:'linear-gradient(135deg,#c8d8e8,#a0b8cc)', 
+    meta:{
+      'Lanzamiento':'16 jul, 2018',
+      'Sello':'Universal Music Japan',
+      'Canciones':'3',
+      'Single':'Fake Love'}, 
+    story:'"Fake Love" en japonés. Explora el dolor de una relación donde perdiste tu identidad por amor.', 
+    tracks:[
+      {n:1,name:'FAKE LOVE (Japanese Ver.)',dur:'4:02',sp:'https://open.spotify.com/search/BTS Fake Love Japanese'},
+      {n:2,name:'Airplane pt.2 (Japanese Ver.)',dur:'3:33',sp:'https://open.spotify.com/search/BTS Airplane Pt 2 Japanese'},
+      {n:3,name:'So What',dur:'3:12',sp:'https://open.spotify.com/search/BTS So What'}]},
+  
+  'ly-tear':{ 
+    title:'Love Yourself: Tear', 
+    type:'3er Álbum de Estudio', 
+    gradient:'linear-gradient(135deg,#1a1a3a,#3a3a6a)', 
+    meta:{
+      'Lanzamiento':'18 may, 2018',
+      'Sello':'Big Hit Ent.',
+      'Canciones':'11',
+      'Single':'Fake Love'}, 
+    story:'El primer álbum de BTS en debutar #1 en Billboard 200. Enfrenta el lado oscuro del amor: la ruptura y la angustia de perder la identidad por otro.', 
+    tracks:[
+      {n:1,name:'Intro: Singularity',feat:'V',dur:'3:47',sp:'https://open.spotify.com/search/BTS Intro Singularity'},
+      {n:2,name:'Fake Love',dur:'4:02',sp:'https://open.spotify.com/track/3Nz7fSM7FuNSBRQxG2xaES'},
+      {n:3,name:'The Truth Untold',dur:'4:11',sp:'https://open.spotify.com/search/BTS The Truth Untold'},
+      {n:4,name:'134340',dur:'4:20',sp:'https://open.spotify.com/search/BTS 134340'},
+      {n:5,name:'Magic Shop',dur:'5:15',sp:'https://open.spotify.com/search/BTS Magic Shop'},
+      {n:6,name:'Airplane pt.2',dur:'3:33',sp:'https://open.spotify.com/search/BTS Airplane Pt 2'},
+      {n:7,name:'Anpanman',dur:'3:13',sp:'https://open.spotify.com/search/BTS Anpanman'},
+      {n:8,name:'Outro: Tear',feat:'RM, Suga, J-Hope',dur:'3:39',sp:'https://open.spotify.com/search/BTS Outro Tear'}]},
+  
+  'ly-answer':{ 
+    title:'Love Yourself: Answer', 
+    type:'Repackage', 
+    gradient:'linear-gradient(135deg,#f0a8c8,#d878a8)', 
+    meta:{
+      'Lanzamiento':'24 ago, 2018',
+      'Sello':'Big Hit Ent.',
+      'Canciones':'26',
+      'Singles':'IDOL / Im Fine'}, 
+    story:'El cierre de la trilogía Love Yourself. "IDOL" celebra la identidad sin disculpas. El discurso de RM en la ONU acompañó este lanzamiento.', tracks:[
+      {n:1,name:'Euphoria',feat:'Jungkook',dur:'3:59',sp:'https://open.spotify.com/search/BTS Euphoria'},
+      {n:2,name:'DNA',dur:'3:43',sp:'https://open.spotify.com/track/7CilDQdBGRXs8sDRZsUnQX'},
+      {n:3,name:'IDOL',dur:'3:41',sp:'https://open.spotify.com/track/3TGBn7UNjDK3oU4uFAlRwp'},
+      {n:4,name:'Fake Love',dur:'4:02',sp:'https://open.spotify.com/track/3Nz7fSM7FuNSBRQxG2xaES'},
+      {n:5,name:'Epiphany',feat:'Jin',dur:'3:59',sp:'https://open.spotify.com/search/BTS Epiphany'},
+      {n:6,name:'Answer: Love Myself',dur:'3:57',sp:'https://open.spotify.com/search/BTS Answer Love Myself'}]},
+  
+  'face-yourself':{ 
+    title:'Face Yourself', 
+    type:'Álbum Japonés', 
+    gradient:'linear-gradient(135deg,#d0a8d8,#a878b8)',
+    meta:{
+      'Lanzamiento':'4 abr, 2018',
+      'Sello':'Universal Music Japan',
+      'Canciones':'12',
+      'Single':'Dont Leave Me'},
+    story:'El cuarto álbum japonés de BTS. Explora la autoaceptación con un sonido más maduro.', 
+    tracks:[
+      {n:1,name:'Dont Leave Me',dur:'3:43',sp:'https://open.spotify.com/search/BTS Dont Leave Me'},
+      {n:2,name:'Let Go',dur:'4:01',sp:'https://open.spotify.com/search/BTS Let Go'},
+      {n:3,name:'DNA (Japanese Ver.)',dur:'3:43',sp:'https://open.spotify.com/search/BTS DNA Japanese'},
+      {n:4,name:'Fake Love (Japanese Ver.)',dur:'4:02',sp:'https://open.spotify.com/search/BTS Fake Love Japanese'}]},
+  
+  'mots-persona':{ 
+    title:'Map of the Soul: Persona', 
+    type:'6to Mini Álbum', 
+    gradient:'linear-gradient(135deg,#ff6fa8,#ff3d7a)', 
+    meta:{
+      'Lanzamiento':'12 abr, 2019',
+      'Sello':'Big Hit Ent.',
+      'Canciones':'7',
+      'Single':'Boy With Luv'}, 
+    story:'"Boy With Luv" con Halsey batió el récord de YouTube en 24 horas. Una exploración del concepto jungiano de la Persona.', 
+    tracks:[
+      {n:1,name:'Intro: Persona',feat:'RM',dur:'3:15',sp:'https://open.spotify.com/search/BTS Intro Persona'},
+      {n:2,name:'Boy With Luv',feat:'feat. Halsey',dur:'3:49',sp:'https://open.spotify.com/track/5KawlOMHjWeUjQtnuRs22c'},
+      {n:3,name:'Mikrokosmos',dur:'3:59',sp:'https://open.spotify.com/search/BTS Mikrokosmos'},
+      {n:4,name:'Make It Right',dur:'3:31',sp:'https://open.spotify.com/search/BTS Make It Right'},
+      {n:5,name:'HOME',dur:'3:28',sp:'https://open.spotify.com/search/BTS HOME'},
+      {n:6,name:'Jamais Vu',feat:'Jin, J-Hope, Jungkook',dur:'5:01',sp:'https://open.spotify.com/search/BTS Jamais Vu'},
+      {n:7,name:'Dionysus',dur:'4:03',sp:'https://open.spotify.com/search/BTS Dionysus'}]},
+  
+  'bts-world':{ 
+    title:'BTS World OST', 
+    type:'Banda Sonora', 
+    gradient:'linear-gradient(135deg,#e8a0c8,#c870a8)',
+    meta:{
+      'Lanzamiento':'2 jun, 2019',
+      'Sello':'Big Hit Ent.',
+      'Canciones':'17',
+      'Single':'Dream Glow'}, 
+    story:'La banda sonora del juego móvil oficial "BTS World" con colaboraciones de artistas internacionales.', 
+    tracks:[
+      {n:1,name:'Dream Glow',feat:'BTS & Charli XCX',dur:'3:03',sp:'https://open.spotify.com/search/BTS Dream Glow Charli XCX'},
+      {n:2,name:'A Brand New Day',feat:'BTS & Zara Larsson',dur:'3:06',sp:'https://open.spotify.com/search/BTS A Brand New Day Zara Larsson'},
+      {n:3,name:'All Night',feat:'BTS & Juice WRLD',dur:'3:28',sp:'https://open.spotify.com/search/BTS All Night Juice WRLD'}]},
+  
+  'lights-bwl':{ 
+    title:'Lights / Boy With Luv', 
+    type:'Single Japonés',
+    gradient:'linear-gradient(135deg,#a8e0f0,#78c0d8)', 
+    meta:{
+      'Lanzamiento':'3 jul, 2019',
+      'Sello':'Universal Music Japan',
+      'Canciones':'3',
+      'Single':'Lights'}, 
+    story:'"Lights" habla de la luz que los fans representan para BTS — una declaración de amor mutuo envuelta en una melodía irresistible.', 
+    tracks:[
+      {n:1,name:'Lights',dur:'3:36',sp:'https://open.spotify.com/search/BTS Lights Japanese'},
+      {n:2,name:'Boy With Luv (Japanese Ver.)',dur:'3:49',sp:'https://open.spotify.com/search/BTS Boy With Luv Japanese'}]},
+  
+  'mots':{ 
+    title:'Map of the Soul: 7', 
+    type:'4to Álbum de Estudio', 
+    gradient:'linear-gradient(135deg,#1a3a2a,#2d6a4a)', 
+    meta:{
+      'Lanzamiento':'21 feb, 2020',
+      'Sello':'Big Hit Ent.',
+      'Canciones':'20',
+      'Singles':'ON / Black Swan'}, 
+    story:'El álbum más ambicioso de BTS. "ON" llegó con un MV épico. Debutó #1 en 20 países. Consolidó a BTS como el acto más grande del planeta.', tracks:[
+      {n:1,name:'Interlude: Shadow',feat:'Suga',dur:'3:46',sp:'https://open.spotify.com/search/BTS Interlude Shadow'},
+      {n:2,name:'Black Swan',dur:'3:44',sp:'https://open.spotify.com/search/BTS Black Swan'},
+      {n:3,name:'Filter',feat:'Jimin',dur:'3:30',sp:'https://open.spotify.com/search/BTS Filter Jimin'},
+      {n:4,name:'ON',dur:'4:06',sp:'https://open.spotify.com/search/BTS ON Map of the Soul'},
+      {n:5,name:'Moon',feat:'Jin',dur:'3:47',sp:'https://open.spotify.com/search/BTS Moon Jin'},
+      {n:6,name:'Boy With Luv',feat:'Halsey',dur:'3:49',sp:'https://open.spotify.com/track/5KawlOMHjWeUjQtnuRs22c'},
+      {n:7,name:'Inner Child',feat:'V',dur:'4:08',sp:'https://open.spotify.com/search/BTS Inner Child V'},
+      {n:8,name:'Friends',feat:'Jimin & V',dur:'3:34',sp:'https://open.spotify.com/search/BTS Friends Jimin V'},
+      {n:9,name:'Outro: Ego',feat:'J-Hope',dur:'3:57',sp:'https://open.spotify.com/search/BTS Outro Ego'}]},
+  
+  'dynamite':{ 
+    title:'Dynamite', 
+    type:'Single Digital', 
+    gradient:'linear-gradient(135deg,#f8f8f8,#e0e0e0)', 
+    meta:{
+      'Lanzamiento':'21 ago, 2020',
+      'Sello':'Big Hit Ent.',
+      'Canciones':'2',
+      'Single':'Dynamite'}, 
+    story:'El primer single en inglés de BTS. Debutó #1 en el Billboard Hot 100, el primer grupo coreano en lograrlo.', 
+    tracks:[
+      {n:1,name:'Dynamite',dur:'3:20',sp:'https://open.spotify.com/track/3yF5QSCnvOkFGmNFDqqwnM'},
+      {n:2,name:'Dynamite (Instrumental)',dur:'3:20',sp:'https://open.spotify.com/search/BTS Dynamite Instrumental'}]},
+  
+  'be':{ 
+    title:'BE',
+    type:'5to Álbum de Estudio', 
+    gradient:'linear-gradient(135deg,#3a2a1a,#6a4a2d)', 
+    meta:{
+      'Lanzamiento':'20 nov, 2020',
+      'Sello':'Big Hit Ent.',
+      'Canciones':'8',
+      'Single':'Life Goes On'}, 
+    story:'Nacido de la pandemia. Cada integrante tuvo control creativo. "Life Goes On" fue una promesa de que la vida continuaría.', 
+    tracks:[
+      {n:1,name:'Life Goes On',dur:'3:31',sp:'https://open.spotify.com/search/BTS Life Goes On'},
+      {n:2,name:'Fly To My Room',dur:'3:43',sp:'https://open.spotify.com/search/BTS Fly To My Room'},
+      {n:3,name:'Blue & Grey',dur:'4:43',sp:'https://open.spotify.com/search/BTS Blue Grey'},
+      {n:4,name:'Telepathy',dur:'3:03',sp:'https://open.spotify.com/search/BTS Telepathy'},
+      {n:5,name:'Dis-ease',dur:'3:52',sp:'https://open.spotify.com/search/BTS Dis-ease'},
+      {n:6,name:'Stay',dur:'2:52',sp:'https://open.spotify.com/search/BTS Stay BE'},
+      {n:7,name:'Dynamite',dur:'3:20',sp:'https://open.spotify.com/track/3yF5QSCnvOkFGmNFDqqwnM'}]},
+  
+  'butter':{ 
+    title:'Butter', 
+    type:'Single Digital', 
+    gradient:'linear-gradient(135deg,#f5c842,#e0a820)',
+    meta:{
+      'Lanzamiento':'21 may, 2021',
+      'Sello':'Big Hit Ent.',
+      'Canciones':'2',
+      'Single':'Butter'}, 
+    story:'"Butter" pasó 10 semanas en el #1 del Billboard Hot 100. Con "Permission to Dance" como cara B, fue imparable en el verano de 2021.', 
+    tracks:[
+      {n:1,name:'Butter',dur:'2:44',sp:'https://open.spotify.com/track/1mea3bSkSGXuIRvnydlB5b'},
+      {n:2,name:'Permission to Dance',dur:'3:17',sp:'https://open.spotify.com/search/BTS Permission to Dance'}]},
+  
+  'bts-the-best':{ 
+    title:'BTS, The Best', 
+    type:'Compilación Japonesa', 
+    gradient:'linear-gradient(135deg,#9a70d8,#7848c0)', 
+    meta:{
+      'Lanzamiento':'16 jun, 2021',
+      'Sello':'Universal Music Japan',
+      'Canciones':'26',
+      'Single':'Film Out'}, 
+    story:'La compilación más completa del catálogo japonés de BTS con "Film Out" y "Stay Gold".', 
+    tracks:[
+      {n:1,name:'Film Out',dur:'3:36',sp:'https://open.spotify.com/search/BTS Film Out'},
+      {n:2,name:'Stay Gold',dur:'3:15',sp:'https://open.spotify.com/search/BTS Stay Gold'},
+      {n:3,name:'Lights',dur:'3:36',sp:'https://open.spotify.com/search/BTS Lights'},
+      {n:4,name:'Dynamite',dur:'3:20',sp:'https://open.spotify.com/track/3yF5QSCnvOkFGmNFDqqwnM'}]},
+  
+  'proof':{ 
+    title:'Proof', 
+    type:'Álbum Antología', 
+    gradient:'linear-gradient(135deg,#1a1a3a,#2d2d6a)',
+    meta:{
+      'Lanzamiento':'10 jun, 2022',
+      'Sello':'HYBE',
+      'Discos':'3 CDs · 48 canciones',
+      'Single':'Yet To Come'}, 
+    story:'Celebración del camino recorrido y carta de amor al ARMY antes del servicio militar. "Yet To Come" declaró que lo mejor estaba por venir.', tracks:[
+      {n:1,name:'Born Singer',dur:'4:23',sp:'https://open.spotify.com/search/BTS Born Singer'},
+      {n:2,name:'No More Dream',dur:'3:43',sp:'https://open.spotify.com/search/BTS No More Dream'},
+      {n:3,name:'Butter',dur:'2:44',sp:'https://open.spotify.com/track/1mea3bSkSGXuIRvnydlB5b'},
+      {n:4,name:'Yet To Come',dur:'3:15',sp:'https://open.spotify.com/search/BTS Yet To Come'},
+      {n:5,name:'Spring Day',dur:'4:56',sp:'https://open.spotify.com/search/BTS Spring Day'},
+      {n:6,name:'I Need U',dur:'3:30',sp:'https://open.spotify.com/search/BTS I Need U'}]},
 };
 
 const soloAlbumsData = {
