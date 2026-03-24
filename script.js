@@ -488,13 +488,13 @@ const groupAlbums = {
       'Single':'Boy With Luv'}, 
     story:'"Boy With Luv" con Halsey batió el récord de YouTube en 24 horas. Una exploración del concepto jungiano de la Persona.', 
     tracks:[
-      {n:1,name:'Intro: Persona',feat:'RM',dur:'3:15',sp:'https://open.spotify.com/search/BTS Intro Persona'},
-      {n:2,name:'Boy With Luv',feat:'feat. Halsey',dur:'3:49',sp:'https://open.spotify.com/track/5KawlOMHjWeUjQtnuRs22c'},
-      {n:3,name:'Mikrokosmos',dur:'3:59',sp:'https://open.spotify.com/search/BTS Mikrokosmos'},
-      {n:4,name:'Make It Right',dur:'3:31',sp:'https://open.spotify.com/search/BTS Make It Right'},
-      {n:5,name:'HOME',dur:'3:28',sp:'https://open.spotify.com/search/BTS HOME'},
-      {n:6,name:'Jamais Vu',feat:'Jin, J-Hope, Jungkook',dur:'5:01',sp:'https://open.spotify.com/search/BTS Jamais Vu'},
-      {n:7,name:'Dionysus',dur:'4:03',sp:'https://open.spotify.com/search/BTS Dionysus'}]},
+      {n:1,name:'Intro: Persona',feat:'RM',dur:'2:51',sp:'https://open.spotify.com/search/BTS Intro Persona'},
+      {n:2,name:'Boy With Luv',feat:'feat. Halsey',dur:'3:49',sp:'https://open.spotify.com/search/BTS Boy With Luv'},
+      {n:3,name:'Mikrokosmos',dur:'3:44',sp:'https://open.spotify.com/search/BTS Mikrokosmos'},
+      {n:4,name:'Make It Right',dur:'3:46',sp:'https://open.spotify.com/search/BTS Make It Right'},
+      {n:5,name:'HOME',dur:'3:54',sp:'https://open.spotify.com/search/BTS HOME'},
+      {n:6,name:'Jamais Vu',feat:'Jin, J-Hope, Jungkook',dur:'3:47',sp:'https://open.spotify.com/search/BTS Jamais Vu'},
+      {n:7,name:'Dionysus',dur:'4:09',sp:'https://open.spotify.com/search/BTS Dionysus'}]},
   
   'bts-world':{ 
     title:'BTS World OST', 
