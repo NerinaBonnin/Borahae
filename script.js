@@ -503,13 +503,24 @@ const groupAlbums = {
     meta:{
       'Lanzamiento':'2 jun, 2019',
       'Sello':'Big Hit Ent.',
-      'Canciones':'17',
+      'Canciones':'14',
       'Single':'Dream Glow'}, 
     story:'La banda sonora del juego móvil oficial "BTS World" con colaboraciones de artistas internacionales.', 
     tracks:[
-      {n:1,name:'Dream Glow',feat:'BTS & Charli XCX',dur:'3:03',sp:'https://open.spotify.com/search/BTS Dream Glow Charli XCX'},
-      {n:2,name:'A Brand New Day',feat:'BTS & Zara Larsson',dur:'3:06',sp:'https://open.spotify.com/search/BTS A Brand New Day Zara Larsson'},
-      {n:3,name:'All Night',feat:'BTS & Juice WRLD',dur:'3:28',sp:'https://open.spotify.com/search/BTS All Night Juice WRLD'}]},
+      {n:1,name:'Heartbeat',dur:'4:13',sp:'https://open.spotify.com/search/BTS Heartbeat'},
+      {n:2,name:'Dream Glow',feat:'Charlie XCX',dur:'3:07',sp:'https://open.spotify.com/search/BTS Dream Glow'},
+      {n:3,name:'A Brand New Day',feat:'Zara Larsson',dur:'3:25',sp:'https://open.spotify.com/search/BTS A Brand New Day'},
+      {n:4,name:'All Night',feat:'Juice WRLD',dur:'3:37',sp:'https://open.spotify.com/search/BTS All Night Juice WRLD'},
+      {n:5,name:'Captain (Namjoon´s Theme)',dur:'3:19',sp:'https://open.spotify.com/search/BTS Captain (Namjoon´s Theme)'},
+      {n:6,name:'Cake Waltz (Jimin´s Theme)',dur:'3:44',sp:'https://open.spotify.com/search/BTS Cake Waltz (Jimin´s Theme)'},
+      {n:7,name:'Shine (Yoongi´s Theme)',dur:'3:52',sp:'https://open.spotify.com/intl-es/track/2rPgeEQ88KV1qJAjM35Yxk?si=dcc01ca937274773 Shine (Yoongi´s Theme)'},
+      {n:8,name:'Not Alone (Jung Kook´s Theme)',dur:'3:45',sp:'https://open.spotify.com/intl-es/track/58ccJn6Ky422kzNVvf5SA2?si=ae9eb2d4b5354c18 Not Alone (Jung Kook´s Theme)'},
+      {n:9,name:'Friends (OST) (Hoseok´s Theme)',dur:'3:30',sp:'https://open.spotify.com/intl-es/track/2pfmAzI4l8hyh9Y5mMWJY6?si=6bfc4de4d5274c18 Friends (OST) (Hoseok´s Theme)'},
+      {n:10,name:'Wish (Seokjin´s Theme)',dur:'3:57',sp:'https://open.spotify.com/intl-es/track/0QoYZ9jnvARUs3ACQKvR0J?si=d79d71be1cf24614 Wish (Seokjin´s Theme)'},
+      {n:11,name:'Flying (Taehyung´s Theme)',dur:'3:36',sp:'https://open.spotify.com/search/BTS Flying (Taehyung´s Theme)'},
+      {n:12,name:'LaLaLa',feat:'Okdal',dur:'3:11',sp:'https://open.spotify.com/intl-es/track/5YddboEOwmFGfhL524QE4M?si=6de5765858d64690 LaLaLa'},
+      {n:13,name:'You Are Here',feat:'Lee Hyun',dur:'3:36',sp:'https://open.spotify.com/intl-es/track/36zZvvRoRUgDiqwbaH84BB?si=12088d151d594a0b You Are Here'},
+      {n:14,name:'You Are Here (Orchestra ver.)',feat:'Lee Hyun',dur:'3:36',sp:'https://open.spotify.com/intl-es/track/18XYNWjG0BQctJOar6jmkf?si=74992bfa7fc84efb You Are Here (Orchestra ver.)'}]},
   
   'lights-bwl':{ 
     title:'Lights / Boy With Luv', 
@@ -522,8 +533,9 @@ const groupAlbums = {
       'Single':'Lights'}, 
     story:'"Lights" habla de la luz que los fans representan para BTS — una declaración de amor mutuo envuelta en una melodía irresistible.', 
     tracks:[
-      {n:1,name:'Lights',dur:'3:36',sp:'https://open.spotify.com/search/BTS Lights Japanese'},
-      {n:2,name:'Boy With Luv (Japanese Ver.)',dur:'3:49',sp:'https://open.spotify.com/search/BTS Boy With Luv Japanese'}]},
+      {n:1,name:'Lights',dur:'4:52',sp:'https://open.spotify.com/search/BTS Lights'},
+      {n:2,name:'Boy With Luv (Japanese Ver.)',dur:'3:51',sp:'https://open.spotify.com/intl-es/track/2Ya8bityItATB8WNxaaed1?si=fa29de4f836449ec Boy With Luv Japanese'},
+      {n:3,name:'IDOL -japanese ver-',dur:'3:42',sp:'https://open.spotify.com/intl-es/track/7IeoEVVNdCXHeILYk2Yxsr?si=65ffe72e0ef34756 IDOL -japanese ver-'}]},
   
   'mots':{ 
     title:'Map of the Soul: 7', 
@@ -534,16 +546,28 @@ const groupAlbums = {
       'Sello':'Big Hit Ent.',
       'Canciones':'20',
       'Singles':'ON / Black Swan'}, 
-    story:'El álbum más ambicioso de BTS. "ON" llegó con un MV épico. Debutó #1 en 20 países. Consolidó a BTS como el acto más grande del planeta.', tracks:[
-      {n:1,name:'Interlude: Shadow',feat:'Suga',dur:'3:46',sp:'https://open.spotify.com/search/BTS Interlude Shadow'},
-      {n:2,name:'Black Swan',dur:'3:44',sp:'https://open.spotify.com/search/BTS Black Swan'},
-      {n:3,name:'Filter',feat:'Jimin',dur:'3:30',sp:'https://open.spotify.com/search/BTS Filter Jimin'},
-      {n:4,name:'ON',dur:'4:06',sp:'https://open.spotify.com/search/BTS ON Map of the Soul'},
-      {n:5,name:'Moon',feat:'Jin',dur:'3:47',sp:'https://open.spotify.com/search/BTS Moon Jin'},
-      {n:6,name:'Boy With Luv',feat:'Halsey',dur:'3:49',sp:'https://open.spotify.com/track/5KawlOMHjWeUjQtnuRs22c'},
-      {n:7,name:'Inner Child',feat:'V',dur:'4:08',sp:'https://open.spotify.com/search/BTS Inner Child V'},
-      {n:8,name:'Friends',feat:'Jimin & V',dur:'3:34',sp:'https://open.spotify.com/search/BTS Friends Jimin V'},
-      {n:9,name:'Outro: Ego',feat:'J-Hope',dur:'3:57',sp:'https://open.spotify.com/search/BTS Outro Ego'}]},
+    story:'El álbum más ambicioso de BTS. "ON" llegó con un MV épico. Debutó #1 en 20 países. Consolidó a BTS como el acto más grande del planeta.', 
+    tracks:[
+      {n:1,name:'Intro: Persona',feat:'RM',dur:'2:51',sp:'https://open.spotify.com/intl-es/track/7incJHhOl108CJBxylqc1z?si=498dcda06da644cf Intro: Persona'},
+      {n:2,name:'Boy With Luv',feat:'Halsey',dur:'3:49',sp:'https://open.spotify.com/intl-es/track/7lrqvdivAYRGEiO8JFP31G?si=3513415892f1463a Boy With Luv'},
+      {n:3,name:'Make It Right',dur:'3:46',sp:'https://open.spotify.com/intl-es/track/30YLyzfEjMQsXj4ZFslAmT?si=00b22f4841bf455f Make It Right'},
+      {n:4,name:'Jamais Vu',feat:'Jin, J Hope, Jungkook',dur:'3:47',sp:'https://open.spotify.com/intl-es/track/0PpNBEXkjalflGCMMsBV5B?si=b9fc36e336554cc3 Jamais Vu'},
+      {n:5,name:'Dionysus',dur:'4:09',sp:'https://open.spotify.com/intl-es/track/5LvqzuJCNpi2pNkJAX8mBT?si=07ac175769bc4ec2 Dionysus'},
+      {n:6,name:'Interlude: Shadow',feat:'Suga',dur:'4:19',sp:'https://open.spotify.com/search/BTS Interlude: Shadow'},
+      {n:7,name:'Black Swan',dur:'3:18',sp:'https://open.spotify.com/search/BTS Black Swan'},
+      {n:8,name:'Filter',feat:'Jimin',dur:'3:00',sp:'https://open.spotify.com/search/BTS Filter'},
+      {n:9,name:'My Time',feat:'Jungkook',dur:'3:54',sp:'https://open.spotify.com/search/BTS My Time'},
+      {n:10,name:'Louder Than Bombs',dur:'3:37',sp:'https://open.spotify.com/search/BTS Louder Than Bombs'},
+      {n:11,name:'ON',dur:'4:06',sp:'https://open.spotify.com/search/BTS ON'},
+      {n:12,name:'UGH!',feat:'RM, Suga y J Hope',dur:'3:45',sp:'https://open.spotify.com/search/BTS UGH!'},
+      {n:13,name:'00:00 (Zero O´Clock)',feat:'Jin, V, Jimin y Jungkook',dur:'4:10',sp:'https://open.spotify.com/search/BTS 00:00 (Zero O´Clock)'},
+      {n:14,name:'Inner Child',feat:'V',dur:'3:53',sp:'https://open.spotify.com/search/BTS Inner Child'},
+      {n:15,name:'Friends',feat:'Jimin & V',dur:'3:19',sp:'https://open.spotify.com/search/BTS Friends'},
+      {n:16,name:'Moon',feat:'Jin',dur:'3:28',sp:'https://open.spotify.com/search/BTS Moon'},
+      {n:17,name:'Respect',feat:'RM & Suga',dur:'3:57',sp:'https://open.spotify.com/search/BTS Respect'},
+      {n:18,name:'We Are Bulletproof: The Eternal',dur:'4:21',sp:'https://open.spotify.com/search/BTS We Are Bulletproof: The Eternal'},
+      {n:19,name:'Outro: Ego',feat:'J-Hope',dur:'3:16',sp:'https://open.spotify.com/search/BTS Outro Ego'},
+      {n:20,name:'ON',feat:'Sia',dur:'4:06',sp:'https://open.spotify.com/search/BTS ON Sia'}]},
   
   'dynamite':{ 
     title:'Dynamite', 
@@ -556,8 +580,8 @@ const groupAlbums = {
       'Single':'Dynamite'}, 
     story:'El primer single en inglés de BTS. Debutó #1 en el Billboard Hot 100, el primer grupo coreano en lograrlo.', 
     tracks:[
-      {n:1,name:'Dynamite',dur:'3:20',sp:'https://open.spotify.com/track/3yF5QSCnvOkFGmNFDqqwnM'},
-      {n:2,name:'Dynamite (Instrumental)',dur:'3:20',sp:'https://open.spotify.com/search/BTS Dynamite Instrumental'}]},
+      {n:1,name:'Dynamite',dur:'3:19',sp:'https://open.spotify.com/search/BTS Dynamite'},
+      {n:2,name:'Dynamite (Instrumental)',dur:'3:18',sp:'https://open.spotify.com/intl-es/track/0V2wvC5MkDjMZyFttv8sZF?si=75575b070c074d6c Dynamite Instrumental'}]},
   
   'be':{ 
     title:'BE',
@@ -573,10 +597,11 @@ const groupAlbums = {
       {n:1,name:'Life Goes On',dur:'3:31',sp:'https://open.spotify.com/search/BTS Life Goes On'},
       {n:2,name:'Fly To My Room',dur:'3:43',sp:'https://open.spotify.com/search/BTS Fly To My Room'},
       {n:3,name:'Blue & Grey',dur:'4:43',sp:'https://open.spotify.com/search/BTS Blue Grey'},
-      {n:4,name:'Telepathy',dur:'3:03',sp:'https://open.spotify.com/search/BTS Telepathy'},
-      {n:5,name:'Dis-ease',dur:'3:52',sp:'https://open.spotify.com/search/BTS Dis-ease'},
-      {n:6,name:'Stay',dur:'2:52',sp:'https://open.spotify.com/search/BTS Stay BE'},
-      {n:7,name:'Dynamite',dur:'3:20',sp:'https://open.spotify.com/track/3yF5QSCnvOkFGmNFDqqwnM'}]},
+      {n:4,name:'Skit',dur:'2:59',sp:'https://open.spotify.com/search/BTS Skit'},
+      {n:5,name:'Telepathy',dur:'3:22',sp:'https://open.spotify.com/search/BTS Telepathy'},
+      {n:6,name:'Dis-Ease',dur:'3:59',sp:'https://open.spotify.com/search/BTS Dis-Ease'},
+      {n:7,name:'Stay',dur:'3:24',sp:'https://open.spotify.com/intl-es/track/0TdWVbcerMAcvljXrl9gpG?si=f96a3937d5fb4e67 Stay'},
+      {n:7,name:'Dynamite',dur:'3:19',sp:'https://open.spotify.com/search/BTS Dynamite'}]},
   
   'butter':{ 
     title:'Butter', 
@@ -585,12 +610,12 @@ const groupAlbums = {
     meta:{
       'Lanzamiento':'21 may, 2021',
       'Sello':'Big Hit Ent.',
-      'Canciones':'2',
+      'Canciones':'5',
       'Single':'Butter'}, 
     story:'"Butter" pasó 10 semanas en el #1 del Billboard Hot 100. Con "Permission to Dance" como cara B, fue imparable en el verano de 2021.', 
     tracks:[
-      {n:1,name:'Butter',dur:'2:44',sp:'https://open.spotify.com/track/1mea3bSkSGXuIRvnydlB5b'},
-      {n:2,name:'Permission to Dance',dur:'3:17',sp:'https://open.spotify.com/search/BTS Permission to Dance'}]},
+      {n:1,name:'Butter',dur:'2:44',sp:'https://open.spotify.com/search/BTS Butter'},
+      {n:2,name:'Permission to Dance',dur:'3:07',sp:'https://open.spotify.com/search/BTS Permission to Dance'}]},
   
   'bts-the-best':{ 
     title:'BTS, The Best', 
