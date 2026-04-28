@@ -161,18 +161,9 @@ section{padding:5rem 4rem}
 .gallery-placeholder{width:100%;min-height:160px;display:flex;align-items:flex-end;padding:1rem;position:relative}
 .g1 .gallery-placeholder{min-height:340px}.g4 .gallery-placeholder{min-height:180px}.g5 .gallery-placeholder{min-height:320px}
 .gallery-label{font-size:.65rem;letter-spacing:.15em;text-transform:uppercase;color:rgba(255,255,255,.8)}
-.gb1{background:linear-gradient(135deg,#9E8A82,#C9B8B0)}
-.gb2{background:linear-gradient(135deg,#8AADB8,#B8CDD6)}
-.gb3{background:linear-gradient(135deg,#9a8ab0,#C4B8D4)}
-.gb4 {
-  background-image: url('imagenes/GALLERY/bts en escena.jpg');
-  background-size: 100% 100%; /* Esto estira la imagen para cubrir ancho y alto total */
-  background-repeat: no-repeat;
-  background-position: center;
-}
-.gb5{background:linear-gradient(135deg,#8AB0A0,#B8D4C8)}
-.gb6{background:linear-gradient(135deg,#B0A07A,#D4C5A0)}
-.gb7{background:linear-gradient(135deg,#C07870,#D4A5A0)}
+.gb1{background:linear-gradient(135deg,#9E8A82,#C9B8B0)}.gb2{background:linear-gradient(135deg,#8AADB8,#B8CDD6)}
+.gb3{background:linear-gradient(135deg,#9a8ab0,#C4B8D4)}.gb4{background:linear-gradient(135deg,#3C2F2A,#9E8A82)}
+.gb5{background:linear-gradient(135deg,#8AB0A0,#B8D4C8)}.gb6{background:linear-gradient(135deg,#B0A07A,#D4C5A0)}.gb7{background:linear-gradient(135deg,#C07870,#D4A5A0)}
 
 /* ─── PERFORMANCES ─── */
 #performances{background:var(--bg)}
@@ -368,4 +359,29 @@ footer p{font-size:.78rem}
   .members-grid{grid-template-columns:repeat(4,1fr)}
   .hero-btns{flex-direction:column}
   .member-picker{grid-template-columns:repeat(4,1fr)}
+}
+
+
+/* ─── GALLERY REAL IMAGES ──────────────────────────────────────────────── */
+.gallery-placeholder.gal-img {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.gallery-placeholder.gal-img::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom, transparent 40%, rgba(10,8,6,.65));
+}
+.gallery-placeholder.gal-img .gallery-label {
+  position: relative;
+  z-index: 1;
+}
+.gallery-item {
+  transition: opacity .3s, transform .3s;
+}
+.gallery-item:hover {
+  opacity: 1 !important;
+  transform: scale(1.02);
 }
