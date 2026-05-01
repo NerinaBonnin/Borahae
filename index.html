@@ -304,43 +304,32 @@
   </div>
 </section>
 
-<!-- IMPACT -->
+<!-- EXPERIENCIA SONORA -->
 <section id="impact">
   <div class="fade-in">
     <p class="section-tag">Más allá de la música</p>
-    <h2 class="section-title">Impacto Cultural</h2>
+    <h2 class="section-title">Experiencia Sonora</h2>
   </div>
-  <div class="impact-grid fade-in">
-    <div class="impact-card">
-      <div class="impact-num">$5B+</div>
-      <div class="impact-card-title">Impacto económico</div>
-      <p class="impact-card-text">El "efecto BTS" mueve miles de millones de dólares anuales en Corea del Sur. Desde turismo hasta productos, su influencia económica es comparable a la de grandes corporaciones.</p>
-    </div>
-    <div class="impact-card">
-      <div class="impact-num">Primera</div>
-      <div class="impact-card-title">Apertura de occidente al K-pop</div>
-      <p class="impact-card-text">BTS fue el primer grupo coreano en cruzar verdaderamente la barrera idiomática y cultural, logrando que el mundo cantara canciones en coreano sin importarle no entenderlas.</p>
-    </div>
-    <div class="impact-card">
-      <div class="impact-num">💜</div>
-      <div class="impact-card-title">Campaña Love Myself</div>
-      <p class="impact-card-text">En alianza con UNICEF, BTS lanzó la campaña "Love Myself" que recaudó millones para combatir la violencia contra jóvenes. Su mensaje de autoestima llegó a millones de adolescentes.</p>
-    </div>
-    <div class="impact-card">
-      <div class="impact-num">🗣️</div>
-      <div class="impact-card-title">Voz de una generación</div>
-      <p class="impact-card-text">BTS habló sobre salud mental, identidad y aceptación en una industria que históricamente silenció a sus artistas. Abrieron conversaciones que antes eran tabú en Corea y en el mundo.</p>
-    </div>
-    <div class="impact-card">
-      <div class="impact-num">🎨</div>
-      <div class="impact-card-title">Revolución del arte K-pop</div>
-      <p class="impact-card-text">Llevaron la producción musical y visual del K-pop a niveles nunca vistos: MVs con presupuesto cinematográfico, universos narrativos complejos y conceptos artísticos profundos.</p>
-    </div>
-    <div class="impact-card">
-      <div class="impact-num">🌏</div>
-      <div class="impact-card-title">Soft power coreano</div>
-      <p class="impact-card-text">El gobierno coreano reconoció a BTS como embajadores culturales del país. Son los representantes más influyentes del "Hallyu" (Ola Coreana) en todo el mundo.</p>
-    </div>
+  <div class="sound-grid">
+    <button onclick="playSound('live')">Concierto en vivo</button>
+    <button onclick="playSound('onu')">Discurso ONU</button>
+    <button onclick="playSound('army')">ARMY</button>
+    <button onclick="playSound('award')">Premio</button>
+    <button onclick="playSound('Vocal')">Vocal line</button>
+    <button onclick="playSound('Rap')">Rap line</button>
+    <button onclick="playSound('backstage')">backstage</button>
+  </div>
+
+  <div class="sound-player">
+    <p id="sound-text">Seleccioná una experiencia</p>
+
+    <iframe 
+      id="sound-video"
+      width="100%" 
+      height="315" 
+      frameborder="0" 
+      allowfullscreen>
+    </iframe>
   </div>
 </section>
 
