@@ -191,12 +191,49 @@ section{padding:5rem 4rem}
 .award-show{font-size:.78rem;color:var(--muted)}
 
 /* ─── IMPACT ─── */
-#impact{background:var(--bg)}
-.impact-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:1.5rem}
-.impact-card{background:var(--card);border:1px solid var(--border);border-radius:6px;padding:2rem}
-.impact-num{font-family:'Cormorant Garamond',serif;font-size:2.5rem;font-weight:300;color:var(--accent);margin-bottom:.5rem}
-.impact-card-title{font-family:'Cormorant Garamond',serif;font-size:1.3rem;color:var(--text);margin-bottom:.6rem}
-.impact-card-text{font-size:.84rem;color:var(--muted);line-height:1.75}
+#sound-impact{
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.sound-grid{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 1rem;
+  margin: 20px 0;
+}
+
+button, p{
+  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+
+.sound-grid button{
+  padding: 1rem;
+  background: #111;
+  color: white;
+  border: 1px solid #333;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.sound-grid button:hover{
+  transform: scale(1.05);
+  background: #222;
+}
+
+.sound-player{
+  margin-top: 20px;
+}
+
+#sound-text{
+  margin-bottom: 10px;
+  font-size: 1.1rem;
+}
+
+.sound-grid button:active{
+  transform: scale(0.95);
+}
 
 /* ─── ARMY ─── */
 #army{background:var(--blush)}
