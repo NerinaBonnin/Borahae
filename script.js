@@ -1021,15 +1021,15 @@ const soloAlbumsData = {
 };
 
 const calEvents = [
-  { month:'Ene', day:'15', name:'SUGA cumple años', desc:'Min Yoongi — Agust D', upcoming:false },
-  { month:'Feb', day:'18', name:'J-Hope cumple años', desc:'Jung Hoseok', upcoming:false },
-  { month:'Mar', day:'9', name:'Suga cumple años', desc:'Min Yoongi — 1993', upcoming:false },
+  { month:'Feb', day:'18', name:'J-Hope cumpleaños', desc:'Jung Hoseok', upcoming:false },
+  { month:'Mar', day:'9', name:'Suga cumpleaños', desc:'Min Yoongi — 1993', upcoming:false },
   { month:'Jun', day:'13', name:'Aniversario de debut', desc:'BTS debuta en 2013', upcoming:true },
-  { month:'Sep', day:'1', name:'Jungkook cumple años', desc:'Jeon Jungkook — 1997', upcoming:false },
-  { month:'Sep', day:'12', name:'RM cumple años', desc:'Kim Namjoon — 1994', upcoming:false },
-  { month:'Oct', day:'13', name:'Jimin cumple años', desc:'Park Jimin — 1995', upcoming:false },
-  { month:'Dic', day:'4', name:'Jin cumple años', desc:'Kim Seokjin — 1992', upcoming:false },
-  { month:'Dic', day:'30', name:'V cumple años', desc:'Kim Taehyung — 1995', upcoming:false },
+  { month:'Jul', day:'9', name:'Aniversario de Army', desc:'Army como fandom', upcoming:false },
+  { month:'Sep', day:'1', name:'Jungkook cumpleaños', desc:'Jeon Jungkook — 1997', upcoming:false },
+  { month:'Sep', day:'12', name:'RM cumpleaños', desc:'Kim Namjoon — 1994', upcoming:false },
+  { month:'Oct', day:'13', name:'Jimin cumpleaños', desc:'Park Jimin — 1995', upcoming:false },
+  { month:'Dic', day:'4', name:'Jin cumpleaños', desc:'Kim Seokjin — 1992', upcoming:false },
+  { month:'Dic', day:'30', name:'V cumpleaños', desc:'Kim Taehyung — 1995', upcoming:false },
 ];
 
 const allSongs = ['Dynamite','Butter','Permission to Dance','Life Goes On','Spring Day','DNA','Fake Love','IDOL','Boy With Luv','Black Swan','ON','Blood Sweat & Tears','Fire','Save Me','I Need U','Run','Go Go','MIC Drop','Not Today','War of Hormone','Danger','Dope','N.O','No More Dream','Born Singer','Am I Wrong','21st Century Girl','Yet To Come','For Youth','Zero O\'Clock','Magic Shop','The Truth Untold','Epiphany','Euphoria','Serendipity','Singularity','Like Crazy','Seven','Standing Next to You','3D','Rainy Days','Love Me Again','Haiku','Wild Flower','Running Wild','Daydream','Agust D','the last'];
