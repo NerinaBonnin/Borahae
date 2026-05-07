@@ -1667,3 +1667,104 @@ document.addEventListener('keydown', function(e) {
     closeLyricModal();
   }
 });
+
+/* ─── ARMY INTERACTIVE ─── */
+
+// Acrónimo interactivo
+(function initArmyAcronym() {
+  const letters = document.querySelectorAll('.army-letter');
+  const panels = document.querySelectorAll('.army-acronym-panel');
+
+  if (!letters.length) return;
+
+  // Activar la primera letra por defecto
+  letters[0].classList.add('active');
+
+  letters.forEach(letter => {
+    letter.addEventListener('click', () => {
+      const info = letter.dataset.info;
+      letters.forEach(l => l.classList.remove('active'));
+      panels.forEach(p => p.classList.remove('active'));
+      letter.classList.add('active');
+      const target = document.getElementById('ai-' + info);
+      if (target) target.classList.add('active');
+    });
+  });
+})();
+
+// Counter animado para stats
+function animateCounter(el) {
+  const target = parseInt(el.dataset.target);
+  const prefix = el.dataset.prefix || '';
+  const suffix = el.dataset.suffix || '';
+  const duration = 1600;
+  const start = performance.now();
+
+  function step(now) {
+    const progress = Math.min((now - start) / duration, 1);
+    const ease = 1 - Math.pow(1 - progress, 3);
+    const value = Math.round(ease * target);
+    el.textContent = prefix + value + suffix;
+    if (progress < 1) requestAnimationFrame(step);
+  }
+  requestAnimationFrame(step);
+}
+
+// Observar stats para animarlos al entrar en pantalla
+(function initArmyStats() {
+  const statNums = document.querySelectorAll('.army-stat-num');
+  if (!statNums.length) return;
+
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting && !entry.target.dataset.animated) {
+        entry.target.dataset.animated = '1';
+        animateCounter(entry.target);
+      }
+    });
+  }, { threshold: 0.4 });
+
+  statNums.forEach(n => observer.observe(n));
+})();
+
+// Quiz de tipo de ARMY
+const armyTypes = {
+  creator: {
+    type: 'El ARMY Creativo',
+    desc: 'Sos el motor visual del fandom. Tus edits, fan arts y videos capturan momentos que los demás solo sueñan expresar. El arte que creás conecta a personas que nunca se van a conocer — eso es magia real.'
+  },
+  analyst: {
+    type: 'El ARMY Intelectual',
+    desc: 'Para vos, cada canción es un laberinto lleno de significados. Encontrás referencias a Jung, a Hesse, a mitología que otros pasan por alto. Sos la persona a la que todos le preguntan "¿qué quiso decir BTS con esto?"'
+  },
+  streamer: {
+    type: 'El ARMY Estratega',
+    desc: 'Conocés los horarios de los charts, las reglas del Billboard, las ventanas de streaming. Mientras otros duermen, vos sumás plays con método y dedicación. Los #1 de BTS tienen tu nombre invisible en los créditos.'
+  },
+  activist: {
+    type: 'El ARMY con Corazón',
+    desc: 'Tomás el mensaje de BTS — amor, aceptación, impacto — y lo llevás al mundo real. Donaciones, campañas, voluntariado. Para vos ser ARMY no es solo escuchar música: es actuar en consecuencia.'
+  },
+  collector: {
+    type: 'El ARMY Coleccionista',
+    desc: 'Tu habitación es un altar cuidadosamente curado. Cada photocard tiene historia, cada álbum tiene lugar asignado. Sos el guardián de la memoria física del grupo — y lo hacés con un amor que pocas personas entienden.'
+  },
+  silent: {
+    type: 'El ARMY del Alma',
+    desc: 'No necesitás demostrarlo. Sentís todo con una intensidad que pocas palabras pueden describir. La música de BTS vive en tus playlists más íntimas, en los momentos difíciles, en los recuerdos que atesorás. Eso es más que suficiente.'
+  }
+};
+
+function armyQuiz(type) {
+  const btns = document.querySelectorAll('.aq-btn');
+  btns.forEach(b => b.classList.remove('selected'));
+  event.target.classList.add('selected');
+
+  const result = document.getElementById('army-quiz-result');
+  const data = armyTypes[type];
+  if (!result || !data) return;
+
+  result.innerHTML = `<div class="aqr-type">💜 ${data.type}</div><p>${data.desc}</p>`;
+  result.classList.add('visible');
+  result.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+}
