@@ -555,23 +555,50 @@
   <div class="fade-in">
     <p class="section-tag">El universo narrativo</p>
     <h2 class="section-title">El Universo BTS (BU)</h2>
-    <p class="universe-intro">El BTS Universe es un universo narrativo ficticio construido a través de videoclips, webtoons, novelas y juegos. No es solo música — es una historia sobre siete amigos, el dolor del crecimiento y la búsqueda de la felicidad.</p>
+    <p class="universe-intro">No es solo música — es una historia sobre siete amigos, el dolor del crecimiento y la búsqueda de la felicidad. Explorá cada era haciendo clic en los nodos.</p>
   </div>
-  <div class="universe-grid fade-in">
-    <div class="universe-card"><div class="universe-icon">📖</div><div class="universe-card-title">El origen: Save Me</div><p class="universe-card-text">Seokjin descubre que puede viajar en el tiempo. Al ver morir a sus amigos, entra en un loop temporal intentando salvarlos. Cada videoclip desde 2015 fue una pieza de este rompecabezas.</p></div>
-    <div class="universe-card"><div class="universe-icon">🌸</div><div class="universe-card-title">The Most Beautiful Moment</div><p class="universe-card-text">La era de "I Need U" y "Run" establece el núcleo del universo: siete jóvenes en el umbral de la adultez, cada uno cargando un trauma diferente. Flores de cerezo y fuego: belleza y destrucción.</p></div>
-    <div class="universe-card"><div class="universe-icon">🪶</div><div class="universe-card-title">Wings y la tentación</div><p class="universe-card-text">Inspirada en "Demian" de Hesse, la era Wings muestra a cada joven enfrentando su sombra interior. El pájaro que rompe el cascarón: para volar, primero hay que caer.</p></div>
-    <div class="universe-card"><div class="universe-icon">💌</div><div class="universe-card-title">Love Yourself y la aceptación</div><p class="universe-card-text">"Her" es el enamoramiento, "Tear" es la ruptura, "Answer" es la resolución: solo cuando te amás a vos mismo podés amar verdaderamente a otro.</p></div>
-    <div class="universe-card"><div class="universe-icon">🗺️</div><div class="universe-card-title">Map of the Soul y Jung</div><p class="universe-card-text">Incorpora la psicología jungiana: Persona (la máscara), Sombra (lo reprimido) y Ego (el yo consciente). Cada integrante representa un arquetipo jungiano.</p></div>
-    <div class="universe-card"><div class="universe-icon">📚</div><div class="universe-card-title">Webtoon & Novelas</div><p class="universe-card-text">El BU se expandió con el webtoon "Save Me", las novelas "The Notes" y el juego "BTS Universe Story". Todos conectados narrativamente con los videoclips.</p></div>
-  </div>
-  <div class="fade-in">
-    <div style="font-size:.65rem;letter-spacing:.22em;text-transform:uppercase;color:var(--dusty);margin-bottom:1rem;padding-bottom:.5rem;border-bottom:1px solid var(--border)">Elementos clave del universo</div>
-    <div class="universe-tags">
-      <span class="universe-tag">Viajes en el tiempo</span><span class="universe-tag">Loops temporales</span><span class="universe-tag">Simbolismo floral</span><span class="universe-tag">Psicología jungiana</span><span class="universe-tag">7 arquetipos</span><span class="universe-tag">Espejo / alter ego</span><span class="universe-tag">Trauma y sanación</span><span class="universe-tag">Mariposas</span><span class="universe-tag">El número 7</span><span class="universe-tag">Demian · Hermann Hesse</span><span class="universe-tag">Webtoon Save Me</span><span class="universe-tag">The Notes</span>
+
+  <div class="bu-explorer fade-in">
+    <div class="bu-map" id="bu-map">
+      <svg class="bu-svg" id="bu-svg" aria-hidden="true"></svg>
+      <div class="bu-node" data-era="origin" style="left:50%;top:3%">
+        <div class="bu-node-inner"><span class="bu-node-year">2013</span><span class="bu-node-name">Origen</span></div>
+      </div>
+      <div class="bu-node" data-era="hyyh" style="left:18%;top:28%">
+        <div class="bu-node-inner"><span class="bu-node-year">2015</span><span class="bu-node-name">HYYH</span></div>
+      </div>
+      <div class="bu-node" data-era="wings" style="left:50%;top:28%">
+        <div class="bu-node-inner"><span class="bu-node-year">2016</span><span class="bu-node-name">Wings</span></div>
+      </div>
+      <div class="bu-node" data-era="ly" style="left:82%;top:28%">
+        <div class="bu-node-inner"><span class="bu-node-year">2017</span><span class="bu-node-name">Love Yourself</span></div>
+      </div>
+      <div class="bu-node" data-era="mots" style="left:32%;top:58%">
+        <div class="bu-node-inner"><span class="bu-node-year">2019</span><span class="bu-node-name">Map of the Soul</span></div>
+      </div>
+      <div class="bu-node" data-era="expanded" style="left:68%;top:58%">
+        <div class="bu-node-inner"><span class="bu-node-year">Medios</span><span class="bu-node-name">Universo Expandido</span></div>
+      </div>
+      <div class="bu-node bu-node-loop" data-era="saveme" style="left:50%;top:82%">
+        <div class="bu-node-inner"><span class="bu-node-year">∞</span><span class="bu-node-name">Save Me · El loop</span></div>
+      </div>
+    </div>
+
+    <div class="bu-detail" id="bu-detail">
+      <div class="bu-detail-placeholder">
+        <div class="bu-placeholder-arrow">←</div>
+        <span class="bu-detail-hint">Seleccioná una era del mapa para explorarla</span>
+      </div>
     </div>
   </div>
+
+  <div class="bu-legend fade-in">
+    <span class="bu-legend-item"><span class="bu-legend-dot bu-dot-narrative"></span>Narrativa / Lore</span>
+    <span class="bu-legend-item"><span class="bu-legend-dot bu-dot-media"></span>Medios expandidos</span>
+    <span class="bu-legend-item"><span class="bu-legend-dot bu-dot-loop"></span>Loop temporal</span>
+  </div>
 </section>
+
 
 <!-- MY JOURNEY -->
 <section id="journey">
@@ -672,6 +699,23 @@
     </div>
   </div>
 </div>
+
+<!-- YT MODAL -->
+<div class="yt-modal-overlay" id="yt-overlay">
+  <div class="yt-modal-box">
+    <div class="yt-modal-header">
+      <div>
+        <span class="yt-modal-era" id="yt-era-label"></span>
+        <div class="yt-modal-title" id="yt-title"></div>
+      </div>
+      <button class="yt-modal-close" id="yt-close">×</button>
+    </div>
+    <div class="yt-iframe-wrap">
+      <iframe id="yt-iframe" src="" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+  </div>
+</div>
+
 
 <!-- Cerrar modal al hacer click fuera -->
 <script>

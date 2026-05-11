@@ -1768,3 +1768,290 @@ function armyQuiz(type) {
   result.classList.add('visible');
   result.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
 }
+
+/* ─── BU UNIVERSE EXPLORER ─── */
+
+const buEras = {
+  origin: {
+    tag: '2013 · El comienzo',
+    title: 'El Origen del BU',
+    subtitle: '"No More Dream" — siete chicos, un sueño',
+    narrative: 'El BTS Universe no nació con un plan maestro, sino con siete jóvenes y sus historias reales. Desde el debut, las letras hablaban de presión social, sueños y juventud. Con el tiempo, BTS y Big Hit comenzaron a tejer una narrativa ficticia paralela que conectaría cada videoclip como piezas de un rompecabezas. El punto de partida: siete amigos, cada uno cargando un trauma diferente, en el umbral de la adultez.',
+    mvs: [
+      { name: 'No More Dream', year: '2013', icon: '🎬', ytId: 'rBG5L7UsUxA' },
+      { name: 'N.O', year: '2013', icon: '🎬', ytId: 'r5GaAEHvHj0' },
+      { name: 'Boy In Luv', year: '2014', icon: '🎬', ytId: 'm8MfJg68oCs' },
+    ],
+    media: [
+      { type: 'Contexto', name: 'The Notes — Vol. 0', desc: 'Primeras entradas del diario de los 7. Fragmentos del pasado antes de que todo se rompa.' },
+    ],
+    symbols: ['Siete amigos', 'Presión social', 'Sueños vs. expectativas', 'Escuela', 'Rebeldía']
+  },
+  
+  hyyh: {
+    tag: '2015 · The Most Beautiful Moment in Life',
+    title: 'HYYH · 화양연화',
+    subtitle: 'La belleza y la destrucción coexisten',
+    narrative: 'La era HYYH (Hwayangnyeonhwa — "el momento más hermoso de la vida") establece el núcleo emocional del BU. Siete jóvenes atrapados entre la belleza y el dolor de la adolescencia. Flores de cerezo y fuego. Jin descubre que puede viajar en el tiempo y entra en un loop intentando salvar a sus amigos de sus propios destinos. Cada videoclip es una ventana a ese instante frágil antes de que todo se rompa.',
+    mvs: [
+      { name: 'I Need U', year: '2015', icon: '🎬', ytId: 'jjskoRh8GTE' },
+      { name: 'Run', year: '2015', icon: '🎬', ytId: 'wKysONrSmew' },
+      { name: 'Prologue (short film)', year: '2015', icon: '🎞️', ytId: 'Bt8648TNX1M' },
+    ],
+    media: [
+      { type: 'Webtoon', name: 'Save Me', desc: 'La historia del loop temporal de Seokjin narrada en formato cómic. El punto de partida visual del BU.' },
+      { type: 'Novela', name: 'The Notes — Pt. 1', desc: 'Diarios de cada integrante. Fragmentos que llenan los espacios entre los videoclips.' },
+    ],
+    symbols: ['Flores de cerezo', 'Loop temporal', 'Fuego', 'Espejo', 'El número 7', 'Mariposas']
+  },
+  
+  wings: {
+    tag: '2016 · Wings',
+    title: 'Wings · La tentación',
+    subtitle: '"El pájaro lucha por salir del huevo" — Hermann Hesse',
+    narrative: 'Inspirada en "Demian" de Hermann Hesse, Wings muestra a cada joven enfrentando su sombra interior. El mundo del BU se vuelve más oscuro y simbólico: espejos que reflejan alter egos, tentación, caída y posible redención. Cada integrante tiene su propio short film donde enfrenta su trauma de forma única. Para volar, primero hay que romper el cascarón — aunque duela.',
+    mvs: [
+      { name: 'Blood Sweat & Tears', year: '2016', icon: '🎬', ytId: 'hmE9f-TEutc' },
+      { name: 'Short Film: Begin (Jungkook)', year: '2016', icon: '🎞️', ytId: 'yR73I0z5ms0' },
+      { name: 'Short Film: Lie (Jimin)', year: '2016', icon: '🎞️', ytId: '_y8-HD5O69g' },
+      { name: 'Short Film: Stigma (V)', year: '2016', icon: '🎞️', ytId: '3i34dFsjRY4' },
+    ],
+    media: [
+      { type: 'Referencia literaria', name: 'Demian — Hermann Hesse', desc: 'El libro que inspira toda la era. La dualidad entre la luz y la sombra, el yo y el alter ego.' },
+      { type: 'Novela', name: 'The Notes — Wings', desc: 'Entradas cruzadas donde los traumas se revelan con más detalle.' },
+    ],
+    symbols: ['Demian · Hesse', 'Alter ego', 'Espejo partido', 'Alas', 'Caída', 'Manzana', 'Tentación']
+  },
+  
+  ly: {
+    tag: '2017–2018 · Love Yourself',
+    title: 'Love Yourself',
+    subtitle: 'Her → Tear → Answer: el ciclo del amor propio',
+    narrative: '"Her" es el enamoramiento — ese momento en que otro parece completarte. "Tear" es la ruptura: el dolor cuando esa ilusión se desmorona. "Answer" es la resolución: la comprensión de que solo cuando te amás a vos mismo podés amar verdaderamente a otro. En el BU, la narrativa de Jin y el loop se profundiza. El discurso de RM en la ONU — "Speak Yourself" — lleva el mensaje del álbum al mundo real.',
+    mvs: [
+      { name: 'DNA', year: '2017', icon: '🎬', ytId: 'MBdVXkSdhwU' },
+      { name: 'Fake Love', year: '2018', icon: '🎬', ytId: '7C2z4GqqS5E' },
+      { name: 'IDOL', year: '2018', icon: '🎬', ytId: 'pBuZEGYXA6E' },
+      { name: 'Euphoria (short film)', year: '2018', icon: '🎞️', ytId: 'kX0vO4vlJuU' },
+    ],
+    media: [
+      { type: 'Discurso ONU', name: 'Speak Yourself — RM', desc: 'RM habla ante la Asamblea General de la ONU sobre amor propio e identidad. El BU trasciende la ficción.' },
+      { type: 'Novela', name: 'The Notes — LY', desc: 'La historia de cada integrante avanza hacia el punto de quiebre y la posible sanación.' },
+    ],
+    symbols: ['Amor propio', 'Espejo', 'Euforia', 'Pétalos', 'Unicornio', 'Speak Yourself']
+  },
+  
+  mots: {
+    tag: '2019–2020 · Map of the Soul',
+    title: 'Map of the Soul',
+    subtitle: 'Persona · Sombra · Ego — Jung en la música',
+    narrative: 'Incorpora la psicología analítica de Carl Jung: la Persona (la máscara que mostramos al mundo), la Sombra (lo reprimido que negamos), y el Ego (el yo consciente que debe integrarlos). Cada integrante representa un arquetipo jungiano. La pregunta central: ¿quién sos cuando nadie te mira? "Persona" pregunta, "Shadow" confronta, "7" celebra la integración. El BU alcanza su mayor profundidad filosófica.',
+    mvs: [
+      { name: 'Boy With Luv (feat. Halsey)', year: '2019', icon: '🎬', ytId: 'XsX3ATc3FbA' },
+      { name: 'Black Swan', year: '2020', icon: '🎬', ytId: '0lapF4DQPKQ' },
+      { name: 'ON', year: '2020', icon: '🎬', ytId: 'mPVDGOVjRQ0' },
+    ],
+    media: [
+      { type: 'Referencia', name: 'Carl Jung — Psicología analítica', desc: 'La Persona, la Sombra y el Self como estructura de todo el álbum. BTS llevó la filosofía al pop global.' },
+      { type: 'Novela', name: 'The Notes — MOTS', desc: 'El loop de Jin llega a su momento más complejo. Las líneas temporales se cruzan.' },
+    ],
+    symbols: ['Persona · Sombra · Ego', '7 arquetipos', 'Máscara', 'Carl Jung', 'Integración', 'Cisne negro']
+  },
+  
+  expanded: {
+    tag: 'Medios expandidos',
+    title: 'El Universo Más Allá',
+    subtitle: 'Webtoon, novelas, juego — el BU en todos los formatos',
+    narrative: 'El BTS Universe no vive solo en los videoclips. Big Hit construyó un ecosistema narrativo completo que expande, profundiza y a veces contradice lo que vemos en pantalla. El webtoon "Save Me", las novelas "The Notes", el juego "BTS Universe Story" y los Concept Books son piezas de un puzzle que los fans llevan años armando. Cada medio agrega capas que los demás no revelan.',
+    mvs: [],
+    media: [
+      { type: 'Webtoon', name: 'Save Me (Lezhin)', desc: 'La historia del loop temporal de Jin en formato manhwa. Dibujado y publicado oficialmente por Big Hit.' },
+      { type: 'Novela', name: 'The Notes 1 & 2', desc: 'Diarios de los 7 integrantes con entradas cruzadas. La fuente más completa del lore del BU.' },
+      { type: 'Juego', name: 'BTS Universe Story', desc: 'Juego mobile de aventura donde los fans podían crear y jugar historias dentro del universo narrativo del BU.' },
+      { type: 'Libro', name: 'Concept Book — HYYH', desc: 'Libro oficial con imágenes y texto que expande la narrativa visual de la era más emblemática.' },
+    ],
+    symbols: ['Webtoon', 'The Notes', 'Lore expandido', 'Fan theories', 'Manhwa', 'BU Story']
+  },
+  
+  saveme: {
+    tag: '∞ · El loop eterno',
+    title: 'Save Me · El Loop',
+    subtitle: 'Todo vuelve al principio — y eso es lo hermoso',
+    narrative: 'Seokjin descubre que puede viajar en el tiempo. Ve morir a sus amigos. Vuelve atrás. Intenta salvarlos. Falla de otra manera. Vuelve atrás otra vez. El loop no tiene salida — o quizás la tiene, pero requiere que todos elijan sanar al mismo tiempo. "Save Me" es el título del webtoon, de una canción, y del concepto central del BU: el tiempo no es lineal, la memoria es un campo de batalla, y el amor puede doblar la realidad. El universo termina donde empieza — y siempre está comenzando.',
+    mvs: [
+      { name: 'Save Me', year: '2016', icon: '🎬', ytId: 'GZjt_sA2eso' },
+      { name: 'Spring Day', year: '2017', icon: '🎬', ytId: 'xEeFrLSkMm8' },
+      { name: "Zero O'Clock", year: '2020', icon: '🎵', ytId: 'sBWesVezIrc' },
+    ],
+    media: [
+      { type: 'Concepto central', name: 'El loop de Jin', desc: 'Jin es el único que recuerda los loops. Cada intento de salvar a sus amigos genera una nueva línea temporal.' },
+      { type: 'Símbolo', name: 'La flor de loto invertida', desc: 'Símbolo recurrente del BU: belleza que emerge del lodo, ciclos, muerte y renacimiento.' },
+    ],
+    symbols: ['Loop temporal', 'Líneas temporales', 'Memoria', 'Seokjin', 'Paradoja', 'Flor de loto', '∞']
+  }
+};
+
+function renderBuConnections() {
+  const map = document.getElementById('bu-map');
+  const svg = document.getElementById('bu-svg');
+  if (!map || !svg) return;
+
+  const connections = [
+    ['origin', 'hyyh'],
+    ['origin', 'wings'],
+    ['origin', 'ly'],
+    ['hyyh', 'mots'],
+    ['wings', 'mots'],
+    ['ly', 'expanded'],
+    ['mots', 'saveme'],
+    ['expanded', 'saveme'],
+  ];
+
+  const mapRect = map.getBoundingClientRect();
+
+  function getNodeCenter(era) {
+    const node = map.querySelector(`[data-era="${era}"]`);
+    if (!node) return null;
+    const style = node.getAttribute('style');
+    const leftMatch = style.match(/left:([\d.]+)%/);
+    const topMatch = style.match(/top:([\d.]+)%/);
+    if (!leftMatch || !topMatch) return null;
+    return {
+      x: (parseFloat(leftMatch[1]) / 100) * map.offsetWidth,
+      y: (parseFloat(topMatch[1]) / 100) * map.offsetHeight
+    };
+  }
+
+  svg.innerHTML = '';
+  svg.setAttribute('viewBox', `0 0 ${map.offsetWidth} ${map.offsetHeight}`);
+
+  connections.forEach(([a, b]) => {
+    const from = getNodeCenter(a);
+    const to = getNodeCenter(b);
+    if (!from || !to) return;
+    const line = document.createElementNS('http://www.w3.org/2000/svg', 'line');
+    line.setAttribute('x1', from.x);
+    line.setAttribute('y1', from.y);
+    line.setAttribute('x2', to.x);
+    line.setAttribute('y2', to.y);
+    line.setAttribute('stroke', 'var(--border)');
+    line.setAttribute('stroke-width', '1.5');
+    line.setAttribute('stroke-dasharray', b === 'saveme' ? '4 4' : 'none');
+    svg.appendChild(line);
+  });
+}
+
+function openBuEra(era) {
+  const data = buEras[era];
+  if (!data) return;
+
+  document.querySelectorAll('.bu-node').forEach(n => n.classList.remove('active'));
+  const activeNode = document.querySelector(`[data-era="${era}"]`);
+  if (activeNode) activeNode.classList.add('active');
+
+  const hasMvs = data.mvs && data.mvs.length > 0;
+  const hasMedia = data.media && data.media.length > 0;
+
+  const mvsHtml = hasMvs ? data.mvs.map(mv =>
+    `<li class="bu-mv-item" ${mv.ytId ? `onclick="openYtModal('${mv.ytId}','${mv.name}','${data.tag}')"` : ''} style="${mv.ytId ? 'cursor:pointer' : 'cursor:default'}">
+      <span class="bu-mv-icon">${mv.icon}</span>
+      <span class="bu-mv-name">${mv.name}</span>
+      <span class="bu-mv-year">${mv.year}</span>
+      ${mv.ytId ? '<span style="font-size:.65rem;color:var(--accent);letter-spacing:.1em;text-transform:uppercase;flex-shrink:0">▶ Ver</span>' : ''}
+    </li>`
+  ).join('') : '<li style="font-size:.82rem;color:var(--muted);padding:.5rem 0">No hay videoclips específicos en esta categoría.</li>';
+
+  const mediaHtml = hasMedia ? `<div class="bu-media-grid">${data.media.map(m =>
+    `<div class="bu-media-card"><div class="bu-media-type">${m.type}</div><div class="bu-media-name">${m.name}</div><p class="bu-media-desc">${m.desc}</p></div>`
+  ).join('')}</div>` : '<p style="font-size:.82rem;color:var(--muted)">Sin medios específicos.</p>';
+
+  const symbolsHtml = data.symbols.map(s => `<span class="bu-symbol-tag">${s}</span>`).join('');
+
+  const detail = document.getElementById('bu-detail');
+  detail.innerHTML = `
+    <div class="bu-era-panel">
+      <div class="bu-era-header">
+        <span class="bu-era-tag">${data.tag}</span>
+        <div class="bu-era-title">${data.title}</div>
+        <div class="bu-era-subtitle">${data.subtitle}</div>
+      </div>
+      <div class="bu-tabs">
+        <button class="bu-tab active" onclick="switchBuTab(event,'narrative')">Narrativa</button>
+        <button class="bu-tab" onclick="switchBuTab(event,'mvs')">Videoclips</button>
+        <button class="bu-tab" onclick="switchBuTab(event,'media')">Medios</button>
+        <button class="bu-tab" onclick="switchBuTab(event,'symbols')">Símbolos</button>
+      </div>
+      <div class="bu-tab-content active" id="bu-tab-narrative">
+        <p class="bu-narrative-text">${data.narrative}</p>
+      </div>
+      <div class="bu-tab-content" id="bu-tab-mvs">
+        <ul class="bu-mv-list">${mvsHtml}</ul>
+      </div>
+      <div class="bu-tab-content" id="bu-tab-media">${mediaHtml}</div>
+      <div class="bu-tab-content" id="bu-tab-symbols">
+        <div class="bu-symbols">${symbolsHtml}</div>
+      </div>
+    </div>`;
+}
+
+function switchBuTab(e, tab) {
+  const panel = document.getElementById('bu-detail');
+  panel.querySelectorAll('.bu-tab').forEach(t => t.classList.remove('active'));
+  panel.querySelectorAll('.bu-tab-content').forEach(c => c.classList.remove('active'));
+  e.target.classList.add('active');
+  const target = panel.querySelector(`#bu-tab-${tab}`);
+  if (target) target.classList.add('active');
+}
+
+(function initBuExplorer() {
+  const nodes = document.querySelectorAll('.bu-node');
+  if (!nodes.length) return;
+
+  nodes.forEach(node => {
+    node.addEventListener('click', () => {
+      openBuEra(node.dataset.era);
+    });
+  });
+
+  // Dibujar conexiones al cargar y al redimensionar
+  setTimeout(renderBuConnections, 100);
+  window.addEventListener('resize', renderBuConnections);
+})();
+
+/* ─── YT MODAL ─── */
+function openYtModal(ytId, title, eraLabel) {
+  const overlay = document.getElementById('yt-overlay');
+  const iframe = document.getElementById('yt-iframe');
+  const titleEl = document.getElementById('yt-title');
+  const eraEl = document.getElementById('yt-era-label');
+  if (!overlay || !iframe) return;
+
+  titleEl.textContent = title;
+  eraEl.textContent = eraLabel;
+  iframe.src = `https://www.youtube.com/embed/${ytId}?autoplay=1`;
+  overlay.classList.add('open');
+  document.body.style.overflow = 'hidden';
+}
+
+function closeYtModal() {
+  const overlay = document.getElementById('yt-overlay');
+  const iframe = document.getElementById('yt-iframe');
+  if (!overlay) return;
+  overlay.classList.remove('open');
+  iframe.src = '';
+  document.body.style.overflow = '';
+}
+
+document.addEventListener('DOMContentLoaded', function () {
+  const overlay = document.getElementById('yt-overlay');
+  const closeBtn = document.getElementById('yt-close');
+  if (closeBtn) closeBtn.addEventListener('click', closeYtModal);
+  if (overlay) overlay.addEventListener('click', function (e) {
+    if (e.target === overlay) closeYtModal();
+  });
+});
+
+document.addEventListener('keydown', function (e) {
+  if (e.key === 'Escape') closeYtModal();
+});
+
