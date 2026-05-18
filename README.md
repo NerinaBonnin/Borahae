@@ -125,7 +125,7 @@ La palabra “Borahae” significa:
 Proyecto desarrollado por Nerina Bonnin.
 
 💜 Pagina 💜
-Podes ver la pagina con este enlace: https://borahae-fanpage.netlify.app
+
 
 
 💜 Disclaimer 💜
