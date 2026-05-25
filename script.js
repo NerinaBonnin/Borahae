@@ -1253,7 +1253,10 @@ function openAlbum(id,source){
   const ci=source==='solo'?soloAlbumCovers[id]:albumCoverImages[id];
   coverEl.removeAttribute('style');
   coverEl.className='album-modal-cover';
-  if(ci){coverEl.style.backgroundImage='url('+ci+')';coverEl.style.backgroundSize='cover';coverEl.style.backgroundPosition='center';coverEl.style.minHeight='240px';}
+  if(ci){coverEl.style.backgroundImage='url('+ci+')';
+    coverEl.style.backgroundSize='cover';
+    coverEl.style.backgroundPosition='center';
+    coverEl.style.minHeight='240px';}
   else{coverEl.style.background=a.gradient;coverEl.style.minHeight='240px';coverEl.innerHTML='<span style="font-family:Cormorant Garamond,serif;font-size:1.8rem;font-weight:300;color:rgba(255,255,255,.85);text-align:center;line-height:1.2;padding:1rem;">'+a.title+'</span>';}
   document.getElementById('am-type').textContent=source==='solo'?`Solista · ${a.member}`:a.type;
   document.getElementById('am-title').textContent=a.title;
@@ -1296,11 +1299,26 @@ function buildGroupGrid(){
     if(!a){console.warn('Album no encontrado:',k);return;}
     const card=document.createElement('div');
     card.className='album-card';
+    
+    
     const coverDiv=document.createElement('div');
     coverDiv.className='album-cover';
+
     const ci=albumCoverImages[k];
-    if(ci){coverDiv.style.backgroundImage='url('+ci+')';coverDiv.style.backgroundSize='cover';coverDiv.style.backgroundPosition='center';}
-    else{coverDiv.classList.add(fallback[i]||'a1');}
+
+    if(ci){
+      const img=document.createElement('img');
+      img.src=ci;
+      img.alt=a.title;
+      img.loading='lazy';
+
+      coverDiv.appendChild(img);
+    }
+    else{
+      coverDiv.classList.add(fallback[i]||'a1');
+    }
+
+    
     const info=document.createElement('div');
     info.innerHTML='<div class="album-year-tag">'+(a.meta['Lanzamiento']||'')+'</div><div class="album-name">'+a.title+'</div><div class="album-type-tag">'+a.type+'</div>';
     card.appendChild(coverDiv);card.appendChild(info);
