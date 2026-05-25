@@ -735,6 +735,13 @@ section{
   overflow:hidden
 }
 
+.album-cover img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  display:block;
+}
+
 .album-cover-text{
   font-family:'Cormorant Garamond',serif;
   font-size:1.6rem;
