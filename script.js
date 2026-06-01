@@ -1355,8 +1355,18 @@ function buildSoloGrid(){
     coverDiv.className='solo-cover';
     const ci=soloAlbumCovers[a.id];
     const sd=soloAlbumsData[a.id];
-    if(ci){coverDiv.style.backgroundImage='url('+ci+')';coverDiv.style.backgroundSize='cover';coverDiv.style.backgroundPosition='center';}
-    else if(sd){coverDiv.style.background=sd.gradient;}
+    if(ci){
+      const img=document.createElement('img');
+
+      img.src=ci;
+      img.alt=a.title;
+      img.loading='lazy';
+
+      coverDiv.appendChild(img);
+    }
+    else if(sd){
+      coverDiv.style.background=sd.gradient;
+    }
     const info=document.createElement('div');
     info.innerHTML='<div class="solo-member-tag">'+a.member+'</div><div class="solo-title">'+a.title+'</div><div class="solo-year">'+a.year+' · '+a.type+'</div>';
     card.appendChild(coverDiv);card.appendChild(info);
