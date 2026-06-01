@@ -732,7 +732,8 @@ section{
   align-items:center;
   justify-content:center;
   position:relative;
-  overflow:hidden
+  overflow:hidden;
+  min-height: 150px;
 }
 
 .album-cover img{
@@ -793,7 +794,8 @@ section{
   justify-content:center;
   padding:1rem;
   position:relative;
-  overflow:hidden
+  overflow:hidden;
+  min-height: 150px;
 }
 
 .solo-cover img{
@@ -2911,6 +2913,13 @@ footer p{
   }
   .member-picker{
     grid-template-columns:repeat(4,1fr)
+  }
+
+  .albums-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .solo-grid {
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 
