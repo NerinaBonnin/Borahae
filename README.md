@@ -6,7 +6,7 @@ Este proyecto fue creado con HTML, CSS y JavaScript, combinando una estética el
   <img src="imagenes/assets/descargar (4).jpg" width="100%">
 </p>
 
-*** Características ***
+ Características 
 - Modo claro / oscuro
 - Buscador interactivo
 - Diseño responsive para celulares y PC
@@ -14,7 +14,7 @@ Este proyecto fue creado con HTML, CSS y JavaScript, combinando una estética el
 - Pagina interactiva
 
 
-*** Secciones de la pagina ***
+ Secciones de la pagina 
 
 - ***Sección de integrantes*** 
   Muestra información individual sobre cada miembro de BTS.
@@ -54,7 +54,7 @@ Este proyecto fue creado con HTML, CSS y JavaScript, combinando una estética el
 
 
 
-*** Tecnologías utilizadas ***
+Tecnologías utilizadas
 
 ***HTML5***
 Se utilizó para crear la estructura principal de la página.
@@ -69,7 +69,7 @@ Añade interactividad y funciones dinámicas al proyecto.
 Es ultilizado para que la pagina se haga Responsive para Celulares, Tablets y PC.
 
 
-*** Inspiración visual ***
+Inspiración visual
 La página utiliza una estética elegante y suave inspirada en tonos:
 
 - ***crema**
@@ -99,7 +99,7 @@ La página utiliza una estética elegante y suave inspirada en tonos:
     - **DM Sans** ---> para textos modernos y minimalistas
 
 
-*** Aprendizaje ***
+Aprendizaje
 Durante este proyecto practiqué:
 - *Responsive Design*
 - *Manipulación del DOM*
