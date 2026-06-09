@@ -124,9 +124,6 @@ La palabra “Borahae” significa:
 
 Proyecto desarrollado por Nerina Bonnin.
 
-💜 Pagina 💜
-
-
 
 💜 Disclaimer 💜
 Este proyecto es una fan page sin fines comerciales dedicada a BTS.
